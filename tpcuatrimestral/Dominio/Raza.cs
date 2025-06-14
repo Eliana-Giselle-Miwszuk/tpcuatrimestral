@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class Razas
+    public class Raza
     {
         int IDRaza { get; set; }  // Identificador único de la raza
         int IDEspecie { get; set; }  // Foreign Key a la especie
