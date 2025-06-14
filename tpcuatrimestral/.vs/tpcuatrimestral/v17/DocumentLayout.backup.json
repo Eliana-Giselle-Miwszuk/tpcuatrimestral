@@ -1,7 +1,32 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5224B315-C5AC-4290-9C12-F5A5D8D04256}|Dominio\\Dominio.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\dominio\\veterinarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5224B315-C5AC-4290-9C12-F5A5D8D04256}|Dominio\\Dominio.csproj|solutionrelative:dominio\\veterinarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5224B315-C5AC-4290-9C12-F5A5D8D04256}|Dominio\\Dominio.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\dominio\\historiasclinicas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5224B315-C5AC-4290-9C12-F5A5D8D04256}|Dominio\\Dominio.csproj|solutionrelative:dominio\\historiasclinicas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5224B315-C5AC-4290-9C12-F5A5D8D04256}|Dominio\\Dominio.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\dominio\\estadoturnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5224B315-C5AC-4290-9C12-F5A5D8D04256}|Dominio\\Dominio.csproj|solutionrelative:dominio\\estadoturnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5224B315-C5AC-4290-9C12-F5A5D8D04256}|Dominio\\Dominio.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\dominio\\especie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5224B315-C5AC-4290-9C12-F5A5D8D04256}|Dominio\\Dominio.csproj|solutionrelative:dominio\\especie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5224B315-C5AC-4290-9C12-F5A5D8D04256}|Dominio\\Dominio.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\dominio\\razas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5224B315-C5AC-4290-9C12-F5A5D8D04256}|Dominio\\Dominio.csproj|solutionrelative:dominio\\razas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5224B315-C5AC-4290-9C12-F5A5D8D04256}|Dominio\\Dominio.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\dominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5224B315-C5AC-4290-9C12-F5A5D8D04256}|Dominio\\Dominio.csproj|solutionrelative:dominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +34,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Dominio\\Usuario.cs",
+              "RelativeDocumentMoniker": "Dominio\\Usuario.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Dominio\\Usuario.cs",
+              "RelativeToolTip": "Dominio\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T04:00:51.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Razas.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Dominio\\Razas.cs",
+              "RelativeDocumentMoniker": "Dominio\\Razas.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Dominio\\Razas.cs",
+              "RelativeToolTip": "Dominio\\Razas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T03:59:03.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Especie.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Dominio\\Especie.cs",
+              "RelativeDocumentMoniker": "Dominio\\Especie.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Dominio\\Especie.cs",
+              "RelativeToolTip": "Dominio\\Especie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T03:56:23.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EstadoTurnos.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Dominio\\EstadoTurnos.cs",
+              "RelativeDocumentMoniker": "Dominio\\EstadoTurnos.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Dominio\\EstadoTurnos.cs",
+              "RelativeToolTip": "Dominio\\EstadoTurnos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T03:51:10.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HistoriasClinicas.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Dominio\\HistoriasClinicas.cs",
+              "RelativeDocumentMoniker": "Dominio\\HistoriasClinicas.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Dominio\\HistoriasClinicas.cs",
+              "RelativeToolTip": "Dominio\\HistoriasClinicas.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T03:47:07.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Veterinarios.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Dominio\\Veterinarios.cs",
+              "RelativeDocumentMoniker": "Dominio\\Veterinarios.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Dominio\\Veterinarios.cs",
+              "RelativeToolTip": "Dominio\\Veterinarios.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T03:44:59.163Z",
+              "EditorCaption": ""
             }
           ]
         }
