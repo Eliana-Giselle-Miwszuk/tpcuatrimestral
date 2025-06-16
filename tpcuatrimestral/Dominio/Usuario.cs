@@ -12,6 +12,6 @@ namespace Dominio
         string nombreUsuario { get; set; }  // Nombre de usuario (ejemplo: "jdoe")  
         string contrasena { get; set; }  // Contraseña del usuario (debería ser almacenada de forma segura, por ejemplo, hasheada)
         string email { get; set; }  // Email del usuario (debería ser único)
-        string tipoUsuario { get; set; }  // Tipo de usuario (ejemplo: "Cliente", "Veterinario", "Administrador")
+        string tipoUsuario { get; set; }  // Tipo de usuario (ejemplo: "Recepcionista", "Veterinario", "Administrador")
     }
 }

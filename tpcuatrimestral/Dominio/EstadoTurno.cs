@@ -9,6 +9,6 @@ namespace Dominio
     internal class EstadoTurno
     {
         public int IDEstadoTurno { get; set; }  
-        public string TipoEstado { get; set; }  // Ejemplo: "Pendiente", "Confirmado", "Cancelado", "Finalizado"
+        public string TipoEstado { get; set; }  
     }
 }
