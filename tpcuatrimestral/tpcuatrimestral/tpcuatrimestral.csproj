@@ -68,10 +68,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="Estilos\FormsEstilo.css" />
     <Content Include="Global.asax" />
     <Content Include="Imagenes\vete.jpg" />
     <Content Include="Vistas\AgregarDueño.aspx" />
+    <Content Include="Vistas\AgregarHC.aspx" />
+    <Content Include="Vistas\AgregarMascota.aspx" />
+    <Content Include="Vistas\EditarMascota.aspx" />
+    <Content Include="Vistas\HistoriasClinicas.aspx" />
     <Content Include="Vistas\ListaDueño.aspx" />
+    <Content Include="Vistas\Mascotas.aspx" />
     <Content Include="Web.config" />
     <Content Include="Vistas\Inicio.aspx" />
   </ItemGroup>
@@ -101,6 +107,34 @@
     <Compile Include="Vistas\AgregarDueño.aspx.designer.cs">
       <DependentUpon>AgregarDueño.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\AgregarHC.aspx.cs">
+      <DependentUpon>AgregarHC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\AgregarHC.aspx.designer.cs">
+      <DependentUpon>AgregarHC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\AgregarMascota.aspx.cs">
+      <DependentUpon>AgregarMascota.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\AgregarMascota.aspx.designer.cs">
+      <DependentUpon>AgregarMascota.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\EditarMascota.aspx.cs">
+      <DependentUpon>EditarMascota.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\EditarMascota.aspx.designer.cs">
+      <DependentUpon>EditarMascota.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\HistoriasClinicas.aspx.cs">
+      <DependentUpon>HistoriasClinicas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\HistoriasClinicas.aspx.designer.cs">
+      <DependentUpon>HistoriasClinicas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\ListaDueño.aspx.cs">
       <DependentUpon>ListaDueño.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -114,6 +148,13 @@
     </Compile>
     <Compile Include="Vistas\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Mascotas.aspx.cs">
+      <DependentUpon>Mascotas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Mascotas.aspx.designer.cs">
+      <DependentUpon>Mascotas.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
