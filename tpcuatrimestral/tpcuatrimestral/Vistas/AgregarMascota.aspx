@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="form-container">
         <p>
-            <asp:Label ID="LblAgregarMascota" runat="server" Font-Bold="True" Font-Size="Larger" Text="Agregar Mascota"></asp:Label>
+            <asp:Label ID="LblAgregarMascota" Class="text-center text-success" runat="server" Font-Bold="True" Font-Size="Larger" Text="Agregar Mascota"></asp:Label>
         </p>
         <p>
             <asp:DropDownList ID="DdlDueño" runat="server" CssClass="form-control">
@@ -30,6 +30,6 @@
         <p>
             <asp:TextBox ID="TextPeso" runat="server" CssClass="form-control" placeholder="Peso en kg" TextMode="Number"></asp:TextBox>
         </p>
-        <asp:Button ID="BtnGuardarMascota" runat="server" Class="btn btn-primary" Text="Guardar" />
+        <asp:Button ID="BtnGuardarMascota" runat="server" Class="btn btn-primary" Text="Guardar" OnClick="BtnGuardarMascota_Click" />
     </div>
 </asp:Content>

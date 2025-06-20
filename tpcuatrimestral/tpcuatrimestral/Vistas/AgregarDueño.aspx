@@ -52,69 +52,50 @@
                         <div class="form-section">
                             <h5 class="mb-4 text-secondary"><i class="fas fa-id-card me-2"></i>Información Básica</h5>
                             
-                            <div class="row g-3">
-                                <!-- DNI -->
-                                <div class="col-md-6">
-                                    <label class="form-label required-field">DNI</label>
-                                    <input type="number" class="form-control" placeholder="Ingrese DNI sin puntos" maxlength="8">
-                                    <small class="text-muted">Ejemplo: 12345678</small>
-                                </div>
-                                
-                                <!-- Fecha Registro -->
-                                <div class="col-md-6">
-                                    <label class="form-label">Fecha de Registro</label>
-                                    <input type="text" class="form-control bg-light" value="15/07/2023" readonly>
-                                </div>
-                                
-                                <!-- Apellido -->
-                                <div class="col-md-6">
-                                    <label class="form-label required-field">Apellido</label>
-                                    <input type="text" class="form-control" placeholder="Ingrese apellido" maxlength="50">
-                                </div>
-                                
-                                <!-- Nombre -->
-                                <div class="col-md-6">
-                                    <label class="form-label required-field">Nombre</label>
-                                    <input type="text" class="form-control" placeholder="Ingrese nombre" maxlength="50">
-                                </div>
-                            </div>
-                        </div>
+                          <!-- DNI -->
+<div class="col-md-6">
+    <label class="form-label required-field">DNI</label>
+    <asp:TextBox ID="txtDni" runat="server" CssClass="form-control" MaxLength="8" TextMode="Number" placeholder="Ingrese DNI sin puntos" />
+    <small class="text-muted">Ejemplo: 12345678</small>
+</div>
+
+<!-- Fecha Registro -->
+
+<!-- Apellido -->
+<div class="col-md-6">
+    <label class="form-label required-field">Apellido</label>
+    <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" MaxLength="50" placeholder="Ingrese apellido" />
+</div>
+
+<!-- Nombre -->
+<div class="col-md-6">
+    <label class="form-label required-field">Nombre</label>
+    <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" MaxLength="50" placeholder="Ingrese nombre" />
+</div>
+
+<!-- Dirección -->
+<div class="col-12">
+    <label class="form-label required-field">Dirección</label>
+    <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control" MaxLength="100" placeholder="Ingrese dirección completa" />
+</div>
+
+<!-- Teléfono -->
+<div class="col-md-6">
+    <label class="form-label required-field">Teléfono</label>
+    <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" MaxLength="20" placeholder="Ingrese teléfono" />
+    <small class="text-muted">Ejemplo: 3815123456</small>
+</div>
+
+<!-- Email -->
+<div class="col-md-6">
+    <label class="form-label required-field">Email</label>
+    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" MaxLength="100" placeholder="Ingrese email" />
+</div>
+
+
+
                         
-                        <!-- Sección Contacto -->
-                        <div class="form-section">
-                            <h5 class="mb-4 text-secondary"><i class="fas fa-address-book me-2"></i>Información de Contacto</h5>
-                            
-                            <div class="row g-3">
-                                <!-- Dirección -->
-                                <div class="col-12">
-                                    <label class="form-label required-field">Dirección</label>
-                                    <input type="text" class="form-control" placeholder="Ingrese dirección completa" maxlength="100">
-                                </div>
-                                
-                                <!-- Teléfono -->
-                                <div class="col-md-6">
-                                    <label class="form-label required-field">Teléfono</label>
-                                    <input type="tel" class="form-control" placeholder="Ingrese teléfono" maxlength="20">
-                                    <small class="text-muted">Ejemplo: 3815123456</small>
-                                </div>
-                                
-                                <!-- Email -->
-                                <div class="col-md-6">
-                                    <label class="form-label required-field">Email</label>
-                                    <input type="email" class="form-control" placeholder="Ingrese email" maxlength="100">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Sección Estado -->
-                        <div class="form-section">
-                            <h5 class="mb-4 text-secondary"><i class="fas fa-cog me-2"></i>Estado</h5>
-                            
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                <label class="form-check-label text-secondary" for="flexSwitchCheckChecked">Dueño activo</label>
-                            </div>
-                        </div>
+
                     </div>
                     
                     <div class="card-footer bg-light">
@@ -128,9 +109,7 @@
                                     <i class="fas fa-broom me-1"></i>Limpiar
                                 </button>
                                 
-                                <button type="submit" class="btn btn-custom">
-                                    <i class="fas fa-save me-1"></i>Guardar Dueño
-                                </button>
+                                <asp:Button ID="btnInsertar" runat="server" Height="34px" OnClick="btnInsertar_Click" Text="Guardar" Width="93px" />
                             </div>
                         </div>
                     </div>

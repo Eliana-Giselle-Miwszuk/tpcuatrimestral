@@ -11,35 +11,53 @@ namespace tpcuatrimestral.Vistas
 {
 
 
-    public partial class EditarMascota
+    public partial class EditarHC
     {
 
         /// <summary>
-        /// Control txtNombre.
+        /// Control txtSintoma.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.TextBox txtSintoma;
 
         /// <summary>
-        /// Control ddlSexo.
+        /// Control txtDiagnostico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSexo;
+        protected global::System.Web.UI.WebControls.TextBox txtDiagnostico;
 
         /// <summary>
-        /// Control txtPeso.
+        /// Control txtTratamiento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPeso;
+        protected global::System.Web.UI.WebControls.TextBox txtTratamiento;
+
+        /// <summary>
+        /// Control Medicacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Medicacion;
+
+        /// <summary>
+        /// Control txtObervacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtObervacion;
 
         /// <summary>
         /// Control btnGuardar.
@@ -49,14 +67,5 @@ namespace tpcuatrimestral.Vistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGuardar;
-
-        /// <summary>
-        /// Control hlCancelar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlCancelar;
     }
 }

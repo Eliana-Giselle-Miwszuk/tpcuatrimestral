@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Negocio;
+using Dominio;
 
 namespace tpcuatrimestral.Vistas
 {
@@ -11,7 +11,99 @@ namespace tpcuatrimestral.Vistas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                CargarHistoriasClinicas();
+            }
+        }
 
+        private void CargarHistoriasClinicas()
+        {
+            try
+            {
+                MascotaNegocio negocio = new MascotaNegocio();
+                var historias = negocio.ListarHistoriasClinicasDisponibles();
+
+                DdlNroHistoriaClinica.DataSource = historias;
+                DdlNroHistoriaClinica.DataTextField = "Value";
+                DdlNroHistoriaClinica.DataValueField = "Key";
+                DdlNroHistoriaClinica.DataBind();
+
+                DdlNroHistoriaClinica.Items.Insert(0, new ListItem("Seleccione una historia clínica", ""));
+            }
+            catch (Exception ex)
+            {
+                // Manejar error (opcional)
+            }
+        }
+
+        protected void DdlNroHistoriaClinica_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(DdlNroHistoriaClinica.SelectedValue))
+            {
+                int nroHistoria = Convert.ToInt32(DdlNroHistoriaClinica.SelectedValue);
+                CargarTurnosPorHistoria(nroHistoria);
+            }
+            else
+            {
+                DdlTurno.Items.Clear();
+                DdlTurno.Items.Insert(0, new ListItem("Seleccione un turno", ""));
+            }
+        }
+
+        private void CargarTurnosPorHistoria(int nroHistoriaClinica)
+        {
+            try
+            {
+                TurnoNegocio negocio = new TurnoNegocio();
+                var turnos = negocio.ListarTurnosPorHistoria(nroHistoriaClinica);
+
+                DdlTurno.DataSource = turnos;
+                DdlTurno.DataTextField = "FechaHoraTurno";
+                DdlTurno.DataValueField = "IDTurno";
+                DdlTurno.DataBind();
+
+                DdlTurno.Items.Insert(0, new ListItem("Seleccione un turno", ""));
+            }
+            catch (Exception ex)
+            {
+                // Manejar error (opcional)
+            }
+        }
+
+        protected void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(DdlNroHistoriaClinica.SelectedValue) ||
+                    string.IsNullOrEmpty(DdlTurno.SelectedValue))
+                {
+                    
+                    return;
+                }
+
+                HistoriaClinica historia = new HistoriaClinica
+                {
+                    NroHistoriaClinica = Convert.ToInt32(DdlNroHistoriaClinica.SelectedValue),
+                    IDTurno = Convert.ToInt32(DdlTurno.SelectedValue),
+                    FechaHoraCita = Convert.ToDateTime(TxtFechaHoraCita.Text),
+                    Sintomas = TextSintomas.Text,
+                    Diagnostico = TextDiagnostico.Text,
+                    Tratamiento = TextTratamiento.Text,
+                    Medicacion = TextMedicacion.Text,
+                    Observaciones = TextObservaciones.Text
+                };
+
+                HistoriaClinicaNegocio negocio = new HistoriaClinicaNegocio();
+                int idRegistro = negocio.AgregarHistoriaClinica(historia);
+
+               
+                Response.Redirect($"HistoriasClinicas.aspx?nroHistoria={historia.NroHistoriaClinica}&success=1");
+            }
+            catch (Exception ex)
+            {
+                
+            }
         }
     }
 }
