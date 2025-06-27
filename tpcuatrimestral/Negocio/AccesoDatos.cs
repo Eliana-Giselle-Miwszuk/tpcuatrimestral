@@ -73,9 +73,35 @@ namespace Negocio
                 throw ex;
             }
         }
+        public int ejecutarAccion(bool retornarFilasAfectadas)
+        {
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                return comando.ExecuteNonQuery(); 
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open)
+                    conexion.Close();
+            }
+        }
         public void setearParametro(string nombre, object valor)
         {
             comando.Parameters.AddWithValue(nombre, valor);
+        }
+        public void DebugParametros()
+        {
+            Debug.WriteLine("--- PARÁMETROS ACTUALES ---");
+            foreach (SqlParameter param in comando.Parameters)
+            {
+                Debug.WriteLine($"{param.ParameterName} = {param.Value} (Tipo: {param.SqlDbType})");
+            }
         }
         public void cerrarConexion()
         {
@@ -84,6 +110,11 @@ namespace Negocio
             conexion.Close();
 
         }
+        public void limpiarParametros()
+        {
+            comando.Parameters.Clear();
+        }
+
         public List<T> ObtenerLista<T>(Func<SqlDataReader, T> mapear)
         {
             var lista = new List<T>();

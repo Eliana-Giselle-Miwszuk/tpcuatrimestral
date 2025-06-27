@@ -8,19 +8,18 @@ namespace Dominio
 {
     public class Veterinario
     {
-     
-            public int IDVeterinario { get; set; }
-            public long Dni { get; set; }
-            public string Apellido { get; set; }
-            public string Nombre { get; set; }
-            public string Direccion { get; set; }
-            public long Telefono { get; set; }
-            public string Email { get; set; }
-            public int MatriculaNacional { get; set; }
-            public int MatriculaProvincial { get; set; }
-            public int IDEspecialidad { get; set; } // Foreign Key
-            public DateTime FechaRegistro { get; set; }
-            public bool Activo { get; set; }
-    
+        public int IDVeterinario { get; set; }
+        public long Dni { get; set; }  // bigint en BD
+        public string Apellido { get; set; }  // nvarchar(50)
+        public string Nombre { get; set; }  // nvarchar(50)
+        public string Direccion { get; set; }  // nvarchar(100)
+        public long Telefono { get; set; }  // bigint en BD
+        public string Email { get; set; }  // nvarchar(100)
+        public long MatriculaNacional { get; set; }  // bigint en BD
+        public long MatriculaProvincial { get; set; }  // bigint en BD
+        public int IDEspecialidad { get; set; }  // int (FK)
+        public DateTime FechaRegistro { get; set; }  // date
+        public bool Activo { get; set; }  // bit
+        public int? IdUsuario { get; set; }  // int, nullable
     }
 }
