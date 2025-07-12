@@ -20,7 +20,7 @@ namespace Negocio
                            Telefono, Email, FechaRegistro, Activo 
                     FROM Dueños
                     WHERE Activo = 1
-                    ORDER BY Apellido, Nombre, fecha");
+                    ORDER BY Apellido, Nombre, FechaRegistro");
 
                 datos.ejecutarLectura();
 

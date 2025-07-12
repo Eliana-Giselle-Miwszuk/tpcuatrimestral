@@ -27,3 +27,9 @@ C:\Users\benja\Downloads\Eliana-v2\Eliana\Eliana\tpcuatrimestral-master\tpcuatri
 C:\Users\benja\Downloads\Eliana-v2\Eliana\Eliana\tpcuatrimestral-master\tpcuatrimestral-master\tpcuatrimestral\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\benja\Downloads\Eliana-v2\Eliana\Eliana\tpcuatrimestral-master\tpcuatrimestral-master\tpcuatrimestral\Dominio\obj\Debug\Dominio.dll
 C:\Users\benja\Downloads\Eliana-v2\Eliana\Eliana\tpcuatrimestral-master\tpcuatrimestral-master\tpcuatrimestral\Dominio\obj\Debug\Dominio.pdb
+C:\Users\USUARIO\Desktop\Tp cuatrimestral Jesus\tpcuatrimestral\tpcuatrimestral\Dominio\bin\Debug\Dominio.dll
+C:\Users\USUARIO\Desktop\Tp cuatrimestral Jesus\tpcuatrimestral\tpcuatrimestral\Dominio\bin\Debug\Dominio.pdb
+C:\Users\USUARIO\Desktop\Tp cuatrimestral Jesus\tpcuatrimestral\tpcuatrimestral\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\USUARIO\Desktop\Tp cuatrimestral Jesus\tpcuatrimestral\tpcuatrimestral\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\Tp cuatrimestral Jesus\tpcuatrimestral\tpcuatrimestral\Dominio\obj\Debug\Dominio.dll
+C:\Users\USUARIO\Desktop\Tp cuatrimestral Jesus\tpcuatrimestral\tpcuatrimestral\Dominio\obj\Debug\Dominio.pdb
