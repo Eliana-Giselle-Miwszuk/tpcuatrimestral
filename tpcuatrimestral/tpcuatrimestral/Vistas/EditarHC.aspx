@@ -24,6 +24,11 @@
         <asp:Button ID="btnGuardar" runat="server" OnClick="btnGuardar_Click" Text="Guardar" Width="119px" />
     </p>
     <p>
+        &nbsp;</p>
+    <p>
+            <asp:Label ID="lblValidar" runat="server" Font-Bold="True" Font-Size="X-Large" ForeColor="Red"></asp:Label>
+    </p>
+    <p>
     </p>
     <p>
     </p>

@@ -11,6 +11,7 @@ namespace tpcuatrimestral.Vistas
 {
     public partial class EditarHC : System.Web.UI.Page
     {
+        Validaciones validacion = new Validaciones();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -50,7 +51,15 @@ namespace tpcuatrimestral.Vistas
             try
             {
                 int idRegistro = Convert.ToInt32(Request.QueryString["id"]);
-
+                string sintomas = txtSintoma.Text;
+                string diagnostico = txtDiagnostico.Text;
+                string tratamiento = txtTratamiento.Text;
+                string mmedicacion = Medicacion.Text;
+                if (validacion.ParametrosNoVacio(new string[] { sintomas, diagnostico, tratamiento, mmedicacion }) == false)
+                {
+                    lblValidar.Text = "HAY CAMPOS OBLIGATORIOS A COMPLETAR";
+                    return;
+                }
                 var hc = new HistoriaClinica
                 {
                     IDRegistro = idRegistro,

@@ -71,19 +71,33 @@
     <Content Include="Estilos\FormsEstilo.css" />
     <Content Include="Global.asax" />
     <Content Include="Imagenes\vete.jpg" />
-    <Content Include="Vistas\AgregarDueño.aspx" />
+    <Content Include="Vistas\Admision\Admision.aspx" />
+    <Content Include="Vistas\Admision\AgregarAdmisionista.aspx" />
+    <Content Include="Vistas\Admision\EditarAdmisionista.aspx" />
+    <Content Include="Vistas\Admision\InicioTurno.aspx" />
+    <Content Include="Vistas\Admision\NuevoTurno.aspx" />
+    <Content Include="Vistas\Admision\PanelAdmision.aspx" />
+    <Content Include="Vistas\Dueños\AgregarDueño.aspx" />
     <Content Include="Vistas\AgregarHC.aspx" />
-    <Content Include="Vistas\AgregarMascota.aspx" />
-    <Content Include="Vistas\EditarDueño.aspx" />
+    <Content Include="Vistas\Mascotas\AgregarMascota.aspx" />
+    <Content Include="Vistas\Dueños\EditarDueño.aspx" />
     <Content Include="Vistas\EditarHC.aspx" />
-    <Content Include="Vistas\EditarMascota.aspx" />
-    <Content Include="Vistas\EditarVeterinario.aspx" />
     <Content Include="Vistas\HistoriasClinicas.aspx" />
-    <Content Include="Vistas\ListaDueño.aspx" />
-    <Content Include="Vistas\AgregarVeterinarios.aspx" />
-    <Content Include="Vistas\ListarVeterinarios.aspx" />
-    <Content Include="Vistas\Mascotas.aspx" />
-    <Content Include="Vistas\ModificarMascota.aspx" />
+    <Content Include="Vistas\Dueños\ListaDueño.aspx" />
+    <Content Include="Vistas\Mascotas\EditMascota.aspx" />
+    <Content Include="Vistas\Mascotas\ListarMascotas.aspx" />
+    <Content Include="Vistas\Mascotas\ModificarMascota.aspx" />
+    <Content Include="Vistas\Turnos\AgregarTurno.aspx" />
+    <Content Include="Vistas\Turnos\Almaneque.aspx" />
+    <Content Include="Vistas\Turnos\EditarEstadoTurno.aspx" />
+    <Content Include="Vistas\Turnos\HCxID.aspx" />
+    <Content Include="Vistas\Turnos\Turnos.aspx" />
+    <Content Include="Vistas\Turnos\TurnosXFechaRecep.aspx" />
+    <Content Include="Vistas\Turnos\TurnosXFechaVete.aspx" />
+    <Content Include="Vistas\VerTurno.aspx" />
+    <Content Include="Vistas\Veterinarios\AgregarVeterinarios.aspx" />
+    <Content Include="Vistas\Veterinarios\EditarVeterinario.aspx" />
+    <Content Include="Vistas\Veterinarios\ListarVeterinarios.aspx" />
     <Content Include="Web.config" />
     <Content Include="Vistas\Inicio.aspx" />
   </ItemGroup>
@@ -106,11 +120,53 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\AgregarDueño.aspx.cs">
+    <Compile Include="Vistas\Admision\Admision.aspx.cs">
+      <DependentUpon>Admision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Admision\Admision.aspx.designer.cs">
+      <DependentUpon>Admision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Admision\AgregarAdmisionista.aspx.cs">
+      <DependentUpon>AgregarAdmisionista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Admision\AgregarAdmisionista.aspx.designer.cs">
+      <DependentUpon>AgregarAdmisionista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Admision\EditarAdmisionista.aspx.cs">
+      <DependentUpon>EditarAdmisionista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Admision\EditarAdmisionista.aspx.designer.cs">
+      <DependentUpon>EditarAdmisionista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Admision\InicioTurno.aspx.cs">
+      <DependentUpon>InicioTurno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Admision\InicioTurno.aspx.designer.cs">
+      <DependentUpon>InicioTurno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Admision\NuevoTurno.aspx.cs">
+      <DependentUpon>NuevoTurno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Admision\NuevoTurno.aspx.designer.cs">
+      <DependentUpon>NuevoTurno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Admision\PanelAdmision.aspx.cs">
+      <DependentUpon>PanelAdmision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Admision\PanelAdmision.aspx.designer.cs">
+      <DependentUpon>PanelAdmision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Dueños\AgregarDueño.aspx.cs">
       <DependentUpon>AgregarDueño.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\AgregarDueño.aspx.designer.cs">
+    <Compile Include="Vistas\Dueños\AgregarDueño.aspx.designer.cs">
       <DependentUpon>AgregarDueño.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\AgregarHC.aspx.cs">
@@ -120,18 +176,18 @@
     <Compile Include="Vistas\AgregarHC.aspx.designer.cs">
       <DependentUpon>AgregarHC.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\AgregarMascota.aspx.cs">
+    <Compile Include="Vistas\Mascotas\AgregarMascota.aspx.cs">
       <DependentUpon>AgregarMascota.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\AgregarMascota.aspx.designer.cs">
+    <Compile Include="Vistas\Mascotas\AgregarMascota.aspx.designer.cs">
       <DependentUpon>AgregarMascota.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\EditarDueño.aspx.cs">
+    <Compile Include="Vistas\Dueños\EditarDueño.aspx.cs">
       <DependentUpon>EditarDueño.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\EditarDueño.aspx.designer.cs">
+    <Compile Include="Vistas\Dueños\EditarDueño.aspx.designer.cs">
       <DependentUpon>EditarDueño.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\EditarHC.aspx.cs">
@@ -141,20 +197,6 @@
     <Compile Include="Vistas\EditarHC.aspx.designer.cs">
       <DependentUpon>EditarHC.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\EditarMascota.aspx.cs">
-      <DependentUpon>EditarMascota.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vistas\EditarMascota.aspx.designer.cs">
-      <DependentUpon>EditarMascota.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\EditarVeterinario.aspx.cs">
-      <DependentUpon>EditarVeterinario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vistas\EditarVeterinario.aspx.designer.cs">
-      <DependentUpon>EditarVeterinario.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\HistoriasClinicas.aspx.cs">
       <DependentUpon>HistoriasClinicas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -162,11 +204,11 @@
     <Compile Include="Vistas\HistoriasClinicas.aspx.designer.cs">
       <DependentUpon>HistoriasClinicas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\ListaDueño.aspx.cs">
+    <Compile Include="Vistas\Dueños\ListaDueño.aspx.cs">
       <DependentUpon>ListaDueño.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\ListaDueño.aspx.designer.cs">
+    <Compile Include="Vistas\Dueños\ListaDueño.aspx.designer.cs">
       <DependentUpon>ListaDueño.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Inicio.aspx.cs">
@@ -176,33 +218,103 @@
     <Compile Include="Vistas\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\AgregarVeterinarios.aspx.cs">
-      <DependentUpon>AgregarVeterinarios.aspx</DependentUpon>
+    <Compile Include="Vistas\Mascotas\EditMascota.aspx.cs">
+      <DependentUpon>EditMascota.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\AgregarVeterinarios.aspx.designer.cs">
-      <DependentUpon>AgregarVeterinarios.aspx</DependentUpon>
+    <Compile Include="Vistas\Mascotas\EditMascota.aspx.designer.cs">
+      <DependentUpon>EditMascota.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\ListarVeterinarios.aspx.cs">
-      <DependentUpon>ListarVeterinarios.aspx</DependentUpon>
+    <Compile Include="Vistas\Mascotas\ListarMascotas.aspx.cs">
+      <DependentUpon>ListarMascotas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\ListarVeterinarios.aspx.designer.cs">
-      <DependentUpon>ListarVeterinarios.aspx</DependentUpon>
+    <Compile Include="Vistas\Mascotas\ListarMascotas.aspx.designer.cs">
+      <DependentUpon>ListarMascotas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Mascotas.aspx.cs">
-      <DependentUpon>Mascotas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vistas\Mascotas.aspx.designer.cs">
-      <DependentUpon>Mascotas.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\ModificarMascota.aspx.cs">
+    <Compile Include="Vistas\Mascotas\ModificarMascota.aspx.cs">
       <DependentUpon>ModificarMascota.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\ModificarMascota.aspx.designer.cs">
+    <Compile Include="Vistas\Mascotas\ModificarMascota.aspx.designer.cs">
       <DependentUpon>ModificarMascota.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Turnos\AgregarTurno.aspx.cs">
+      <DependentUpon>AgregarTurno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Turnos\AgregarTurno.aspx.designer.cs">
+      <DependentUpon>AgregarTurno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Turnos\Almaneque.aspx.cs">
+      <DependentUpon>Almaneque.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Turnos\Almaneque.aspx.designer.cs">
+      <DependentUpon>Almaneque.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Turnos\EditarEstadoTurno.aspx.cs">
+      <DependentUpon>EditarEstadoTurno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Turnos\EditarEstadoTurno.aspx.designer.cs">
+      <DependentUpon>EditarEstadoTurno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Turnos\HCxID.aspx.cs">
+      <DependentUpon>HCxID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Turnos\HCxID.aspx.designer.cs">
+      <DependentUpon>HCxID.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Turnos\Turnos.aspx.cs">
+      <DependentUpon>Turnos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Turnos\Turnos.aspx.designer.cs">
+      <DependentUpon>Turnos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Turnos\TurnosXFechaRecep.aspx.cs">
+      <DependentUpon>TurnosXFechaRecep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Turnos\TurnosXFechaRecep.aspx.designer.cs">
+      <DependentUpon>TurnosXFechaRecep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Turnos\TurnosXFechaVete.aspx.cs">
+      <DependentUpon>TurnosXFechaVete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Turnos\TurnosXFechaVete.aspx.designer.cs">
+      <DependentUpon>TurnosXFechaVete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\VerTurno.aspx.cs">
+      <DependentUpon>VerTurno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\VerTurno.aspx.designer.cs">
+      <DependentUpon>VerTurno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Veterinarios\AgregarVeterinarios.aspx.cs">
+      <DependentUpon>AgregarVeterinarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Veterinarios\AgregarVeterinarios.aspx.designer.cs">
+      <DependentUpon>AgregarVeterinarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Veterinarios\EditarVeterinario.aspx.cs">
+      <DependentUpon>EditarVeterinario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Veterinarios\EditarVeterinario.aspx.designer.cs">
+      <DependentUpon>EditarVeterinario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Veterinarios\ListarVeterinarios.aspx.cs">
+      <DependentUpon>ListarVeterinarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Veterinarios\ListarVeterinarios.aspx.designer.cs">
+      <DependentUpon>ListarVeterinarios.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

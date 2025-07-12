@@ -54,6 +54,9 @@
         <div class="form-actions">
             <asp:Button ID="BtnGuardar" runat="server" Class="btn btn-primary" Text="Guardar Historia Clínica" OnClick="BtnGuardar_Click" />
             <asp:HyperLink ID="HlCancelar" runat="server" NavigateUrl="~/Vistas/HistoriasClinicas.aspx" CssClass="btn-cancelar">Cancelar</asp:HyperLink>
+            <br />
+            <br />
+            <asp:Label ID="lblValidar" runat="server" Font-Bold="True" Font-Size="X-Large" ForeColor="Red"></asp:Label>
         </div>
     </div>
 </asp:Content>

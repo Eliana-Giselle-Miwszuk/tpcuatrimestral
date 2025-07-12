@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admisionista.cs" />
     <Compile Include="Dueño.cs" />
     <Compile Include="EspecialidadVeterinario.cs" />
     <Compile Include="Especie.cs" />

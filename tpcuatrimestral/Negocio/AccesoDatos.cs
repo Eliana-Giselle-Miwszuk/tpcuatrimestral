@@ -21,7 +21,7 @@ namespace Negocio
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS;database=Gestion_Veterinaria_PRO; integrated security=true");
+            conexion = new SqlConnection("server=.\\SQLEXPRESS;database=Gestion_Veterinaria_1; integrated security=true");
             comando = new SqlCommand();
         }
         public void Leer()
@@ -60,12 +60,12 @@ namespace Negocio
         }
         public void ejecutarAccion()
         {
-            comando.Connection = conexion;
+            comando.Connection = conexion;//Anda a SQL ,BD
 
             try
             {
                 conexion.Open();
-                comando.ExecuteNonQuery();
+                comando.ExecuteNonQuery();//Ejecuta mi Consulta de SQL y me retorna si hubo fila afectada.
             }
             catch (Exception ex)
             {
@@ -79,7 +79,7 @@ namespace Negocio
             try
             {
                 conexion.Open();
-                return comando.ExecuteNonQuery(); 
+                return comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -95,14 +95,6 @@ namespace Negocio
         {
             comando.Parameters.AddWithValue(nombre, valor);
         }
-        public void DebugParametros()
-        {
-            Debug.WriteLine("--- PARÁMETROS ACTUALES ---");
-            foreach (SqlParameter param in comando.Parameters)
-            {
-                Debug.WriteLine($"{param.ParameterName} = {param.Value} (Tipo: {param.SqlDbType})");
-            }
-        }
         public void cerrarConexion()
         {
             if (lector != null)
@@ -110,11 +102,6 @@ namespace Negocio
             conexion.Close();
 
         }
-        public void limpiarParametros()
-        {
-            comando.Parameters.Clear();
-        }
-
         public List<T> ObtenerLista<T>(Func<SqlDataReader, T> mapear)
         {
             var lista = new List<T>();
@@ -135,21 +122,19 @@ namespace Negocio
         public int Insertar(string tabla, Dictionary<string, object> parametros)
         {
             //"ID,Nombre,Peso"
-            var campos = string.Join(", ", parametros.Keys);//osea las columnas de la tabla
-            var valores = string.Join(", ", parametros.Keys.Select(k => "@" + k)); //aca los @ que van hacer los parametros a sql
-
-            //valores = @Id,@Nombre,@Peso
+            var campos = string.Join(", ", parametros.Keys);
+            var valores = string.Join(", ", parametros.Keys.Select(k => "@" + k)); 
             comando.CommandText = $"INSERT INTO {tabla} ({campos}) VALUES ({valores}); SELECT SCOPE_IDENTITY();";
-            comando.CommandType = CommandType.Text; //consulta ya lista
+            comando.CommandType = CommandType.Text; 
             comando.Parameters.Clear();
 
-            System.Diagnostics.Debug.WriteLine($"Consulta SQL: {comando.CommandText}");
-            //mi ciclo para que los parametros que hemos hecho tengan los calores que el usuaio ingresó
+            Debug.WriteLine($"Consulta SQL: {comando.CommandText}");
+            
             foreach (var param in parametros)
             {
                 comando.Parameters.AddWithValue("@" + param.Key, param.Value ?? DBNull.Value);
 
-                System.Diagnostics.Debug.WriteLine($"Parámetro: @{param.Key} = {param.Value}");
+                Debug.WriteLine($"Parámetro: @{param.Key} = {param.Value}");
             }
 
             try

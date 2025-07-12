@@ -20,7 +20,7 @@ namespace Negocio
                            Telefono, Email, FechaRegistro, Activo 
                     FROM Dueños
                     WHERE Activo = 1
-                    ORDER BY Apellido, Nombre");
+                    ORDER BY Apellido, Nombre, fecha");
 
                 datos.ejecutarLectura();
 
@@ -53,7 +53,7 @@ namespace Negocio
             }
 
         }
-            public List<KeyValuePair<int, string>> ListarDueñosActivos()
+        public List<KeyValuePair<int, string>> ListarDueñosActivos()
             {
                 try
                 {

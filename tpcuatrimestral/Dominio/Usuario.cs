@@ -8,10 +8,15 @@ namespace Dominio
 {
     public class Usuario
     {
-     public   int idUsuario { get; set; }  // Identificador único del usuario
-        public string nombreUsuario { get; set; }  // Nombre de usuario (ejemplo: "jdoe")  
-        public string contrasena { get; set; }  // Contraseña del usuario (debería ser almacenada de forma segura, por ejemplo, hasheada)
-        public string email { get; set; }  // Email del usuario (debería ser único)
-        public string tipoUsuario { get; set; }  // Tipo de usuario (ejemplo: "Recepcionista", "Veterinario", "Administrador")
+  
+        public int IdUsuario { get; set; }
+        public string NombreUsuario { get; set; }
+        public string Contrasena { get; set; }
+        public string TipoUsuario { get; set; }
+        public bool UsuMaster { get; set; }
+        public DateTime FechaRegistro { get; set; }
+        public bool Activo { get; set; }
+
+
     }
 }

@@ -9,6 +9,8 @@ namespace tpcuatrimestral.Vistas
 {
     public partial class AgregarHC : System.Web.UI.Page
     {
+        //ACÓPLAMIENTO 
+        Validaciones validacion = new Validaciones();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -33,7 +35,7 @@ namespace tpcuatrimestral.Vistas
             }
             catch (Exception ex)
             {
-                // Manejar error (opcional)
+                throw ex;
             }
         }
 
@@ -67,7 +69,7 @@ namespace tpcuatrimestral.Vistas
             }
             catch (Exception ex)
             {
-                // Manejar error (opcional)
+              
             }
         }
 
@@ -82,6 +84,14 @@ namespace tpcuatrimestral.Vistas
                     return;
                 }
 
+                    string sintomas = TextSintomas.Text;
+                   string diagnostico = TextDiagnostico.Text;
+                   string tratamiento = TextTratamiento.Text;
+                string mmedicacion = TextMedicacion.Text;
+                if (validacion.ParametrosNoVacio(new string[]{sintomas,diagnostico,tratamiento,mmedicacion})==false) {
+                    lblValidar.Text = "HAY CAMPOS OBLIGATORIOS A COMPLETAR";
+                    return;
+                }
                 HistoriaClinica historia = new HistoriaClinica
                 {
                     NroHistoriaClinica = Convert.ToInt32(DdlNroHistoriaClinica.SelectedValue),
@@ -102,7 +112,7 @@ namespace tpcuatrimestral.Vistas
             }
             catch (Exception ex)
             {
-                
+                throw ex;
             }
         }
     }

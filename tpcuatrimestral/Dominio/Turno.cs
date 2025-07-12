@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Dominio
@@ -16,5 +17,10 @@ namespace Dominio
         public int IdEstadoTurno { get; set; }
         public DateTime FechaRegistro { get; set; }
         public bool Activo { get; set; }
+
+        public string MascotaNombre { get; set; }
+        public string VeterinarioNombre { get; set; }
+        //aca tamo agregando una propiedad extra para el aspx TurnoXfecha
+        public string EstadoTurnoDescripcion { get; set; }
     }
 }

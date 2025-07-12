@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
+    <Compile Include="AdmisionistaNegocio.cs" />
     <Compile Include="DueñoNegocio.cs" />
     <Compile Include="HistoriaClinicaNegocio.cs" />
     <Compile Include="MascotaNegocio.cs" />
@@ -49,6 +50,7 @@
     <Compile Include="RazaNegocio.cs" />
     <Compile Include="TurnoNegocio.cs" />
     <Compile Include="UsuarioNegocio.cs" />
+    <Compile Include="Validaciones.cs" />
     <Compile Include="VeterinarioNegocio.cs" />
   </ItemGroup>
   <ItemGroup>

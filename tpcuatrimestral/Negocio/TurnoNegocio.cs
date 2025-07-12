@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Dominio;
 using Negocio;
@@ -11,7 +13,71 @@ namespace Negocio
     {
         private AccesoDatos datos = new AccesoDatos();
 
-       
+        public List<Turno> Listar()
+        {
+            List<Turno> Lista = new List<Turno>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta(@"SELECT 
+                            t.IDTurno, 
+                            t.FechaHoraTurno,
+                            t.NroHistoriaClinica, 
+                            t.IDVeterinario,
+                            t.MotivoConsulta, 
+                            t.IDEstadoTurno,
+                            t.FechaRegistro, 
+                            t.Activo,
+                            m.Nombre AS MascotaNombre,
+                            v.Nombre AS VeterinarioNombre
+                         FROM Turnos t
+                         INNER JOIN Mascotas m ON t.NroHistoriaClinica = m.NroHistoriaClinica
+                         INNER JOIN Veterinarios v ON t.IDVeterinario = v.IDVeterinario
+                         WHERE t.Activo = 1
+                         ORDER BY t.FechaHoraTurno");
+
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Turno aux = new Turno();
+
+                    aux.IdTurno = (int)datos.Lector["IDTurno"];
+                    aux.FechaHoraTurno = (DateTime)datos.Lector["FechaHoraTurno"];
+                    aux.NroHistoriaClinica = (int)datos.Lector["NroHistoriaClinica"];
+                    aux.IdVeterinario = (int)datos.Lector["IDVeterinario"];
+                    aux.MotivoConsulta = datos.Lector["MotivoConsulta"].ToString();
+                    aux.IdEstadoTurno = (int)datos.Lector["IDEstadoTurno"];
+                    aux.FechaRegistro = (DateTime)datos.Lector["FechaRegistro"];
+                    aux.Activo = (bool)datos.Lector["Activo"];
+
+                    aux.MascotaNombre = datos.Lector["MascotaNombre"].ToString();
+                    aux.VeterinarioNombre = datos.Lector["VeterinarioNombre"].ToString();
+
+                    Lista.Add(aux);
+                }
+
+                return Lista;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener el listado de turnos", ex);
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+
+
+
+
+
+
+
+
 
         public Turno ObtenerTurnoPorID(int idTurno)
         {
@@ -86,6 +152,143 @@ namespace Negocio
             {
                 datos.cerrarConexion();
             }
+        }
+        public Turno ObtenerTurnoPorId(int idTurno)
+        {
+            try
+            {
+                string query = @"
+        SELECT 
+            t.IDTurno, 
+            t.FechaHoraTurno, 
+            t.NroHistoriaClinica, 
+            t.IDVeterinario, 
+            t.MotivoConsulta, 
+            t.IDEstadoTurno,
+            et.TipoEstado AS EstadoTurno,
+            v.Nombre + ' ' + v.Apellido AS VeterinarioNombre,
+            m.Nombre AS MascotaNombre
+        FROM Turnos t
+        INNER JOIN EstadoTurnos et ON t.IDEstadoTurno = et.IDEstadoTurno
+        INNER JOIN Veterinarios v ON t.IDVeterinario = v.IDVeterinario
+        INNER JOIN Mascotas m ON t.NroHistoriaClinica = m.NroHistoriaClinica
+        WHERE t.IDTurno = @idTurno";
+
+                datos.setearConsulta(query);
+                datos.setearParametro("@idTurno", idTurno);
+                datos.ejecutarLectura();
+
+                if (datos.Lector.Read())
+                {
+                    return new Turno
+                    {
+                        IdTurno = (int)datos.Lector["IDTurno"],
+                        FechaHoraTurno = (DateTime)datos.Lector["FechaHoraTurno"],
+                        NroHistoriaClinica = (int)datos.Lector["NroHistoriaClinica"],
+                        IdVeterinario = (int)datos.Lector["IDVeterinario"],
+                        MotivoConsulta = datos.Lector["MotivoConsulta"].ToString(),
+                        IdEstadoTurno = (int)datos.Lector["IDEstadoTurno"],
+                        VeterinarioNombre = datos.Lector["VeterinarioNombre"].ToString(),
+                        MascotaNombre = datos.Lector["MascotaNombre"].ToString(),
+                        EstadoTurnoDescripcion = datos.Lector["EstadoTurno"].ToString()
+                    };
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener turno por ID", ex);
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public bool ActualizarEstadoTurno(int idTurno, int nuevoEstado)
+        {
+            try
+            {
+                string query = "UPDATE Turnos SET IDEstadoTurno = @estado WHERE IDTurno = @idTurno";
+
+                datos.setearConsulta(query);
+                datos.setearParametro("@estado", nuevoEstado);
+                datos.setearParametro("@idTurno", idTurno);
+
+                 datos.ejecutarAccion();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al actualizar estado del turno", ex);
+                
+            }
+        }
+        public List<EstadoTurno> ListarEstadoTurnos()
+        {
+            try
+            {
+                List<EstadoTurno> lista = new List<EstadoTurno>();
+                string query = "SELECT IDEstadoTurno, TipoEstado FROM EstadoTurnos";
+
+                datos.setearConsulta(query);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    lista.Add(new EstadoTurno
+                    {
+                        IDEstadoTurno = (int)datos.Lector["IDEstadoTurno"],
+                        TipoEstado = datos.Lector["TipoEstado"].ToString()
+                    });
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al listar estados de turno", ex);
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public Turno GetId(int idTurno)
+        {
+            Turno turno = null;
+            try
+            {
+                string query = @"SELECT t.IDTurno, t.IDEstadoTurno, et.TipoEstado 
+                        FROM Turnos t
+                        INNER JOIN EstadoTurnos et ON t.IDEstadoTurno = et.IDEstadoTurno
+                        WHERE t.IDTurno = @idTurno";
+
+                datos.setearConsulta(query);
+                datos.setearParametro("@idTurno", idTurno);
+                datos.ejecutarLectura();
+
+                if (datos.Lector.Read())
+                {
+                    turno = new Turno
+                    {
+                        IdTurno = Convert.ToInt32(datos.Lector["IDTurno"]),
+                        IdEstadoTurno = Convert.ToInt32(datos.Lector["IDEstadoTurno"]),
+                        EstadoTurnoDescripcion = datos.Lector["TipoEstado"].ToString()
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener turno por ID", ex);
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+            return turno;
         }
     }
 }

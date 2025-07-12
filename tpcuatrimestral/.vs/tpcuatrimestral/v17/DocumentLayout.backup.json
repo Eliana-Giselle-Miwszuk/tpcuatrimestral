@@ -1,50 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\",
+  "WorkspaceRootPath": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral-master\\tpcuatrimestral\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\editarmascota.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\editarmascota.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{5224B315-C5AC-4290-9C12-F5A5D8D04256}|Dominio\\Dominio.csproj|c:\\users\\eligi\\documents\\tpcuatrimestral-master\\tpcuatrimestral\\dominio\\veterinario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5224B315-C5AC-4290-9C12-F5A5D8D04256}|Dominio\\Dominio.csproj|solutionrelative:dominio\\veterinario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\mascotas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\mascotas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{5224B315-C5AC-4290-9C12-F5A5D8D04256}|Dominio\\Dominio.csproj|C:\\Users\\EliGi\\Documents\\tpcuatrimestral-master\\tpcuatrimestral\\dominio\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5224B315-C5AC-4290-9C12-F5A5D8D04256}|Dominio\\Dominio.csproj|solutionrelative:dominio\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\agregarmascota.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\agregarmascota.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{E6074B05-1B76-4E5C-B49C-B9FE9837C07B}|Negocio\\Negocio.csproj|C:\\Users\\EliGi\\Documents\\tpcuatrimestral-master\\tpcuatrimestral\\negocio\\turnonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6074B05-1B76-4E5C-B49C-B9FE9837C07B}|Negocio\\Negocio.csproj|solutionrelative:negocio\\turnonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\agregarhc.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\agregarhc.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\historiasclinicas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\historiasclinicas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\historiasclinicas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\historiasclinicas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\agregarmascota.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\agregarmascota.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\estilos\\formsestilo.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\estilos\\formsestilo.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\mascotas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\mascotas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|c:\\users\\usuario\\desktop\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\mascotas.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\mascotas.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|C:\\Users\\EliGi\\Documents\\tpcuatrimestral-master\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Turnos\\Turnos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\Vistas\\Turnos\\Turnos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,150 +26,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AgregarHC.aspx",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\AgregarHC.aspx",
-              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\AgregarHC.aspx",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\AgregarHC.aspx",
-              "RelativeToolTip": "tpcuatrimestral\\Vistas\\AgregarHC.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-18T03:50:59.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HistoriasClinicas.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\HistoriasClinicas.aspx.cs",
-              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\HistoriasClinicas.aspx.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\HistoriasClinicas.aspx.cs",
-              "RelativeToolTip": "tpcuatrimestral\\Vistas\\HistoriasClinicas.aspx.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAD4vxEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T03:42:02.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HistoriasClinicas.aspx",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\HistoriasClinicas.aspx",
-              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\HistoriasClinicas.aspx",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\HistoriasClinicas.aspx",
-              "RelativeToolTip": "tpcuatrimestral\\Vistas\\HistoriasClinicas.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-18T03:39:06.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Site.Master",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Site.Master",
-              "RelativeDocumentMoniker": "tpcuatrimestral\\Site.Master",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Site.Master",
-              "RelativeToolTip": "tpcuatrimestral\\Site.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-18T03:32:42.438Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AgregarMascota.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\AgregarMascota.aspx.cs",
-              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\AgregarMascota.aspx.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\AgregarMascota.aspx.cs",
-              "RelativeToolTip": "tpcuatrimestral\\Vistas\\AgregarMascota.aspx.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAD4vw0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T03:25:38.339Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EditarMascota.aspx",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\EditarMascota.aspx",
-              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\EditarMascota.aspx",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\EditarMascota.aspx",
-              "RelativeToolTip": "tpcuatrimestral\\Vistas\\EditarMascota.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-18T03:18:12.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FormsEstilo.css",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Estilos\\FormsEstilo.css",
-              "RelativeDocumentMoniker": "tpcuatrimestral\\Estilos\\FormsEstilo.css",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Estilos\\FormsEstilo.css",
-              "RelativeToolTip": "tpcuatrimestral\\Estilos\\FormsEstilo.css",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAQwFQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-06-18T03:02:31.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AgregarMascota.aspx",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\AgregarMascota.aspx",
-              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\AgregarMascota.aspx",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\AgregarMascota.aspx",
-              "RelativeToolTip": "tpcuatrimestral\\Vistas\\AgregarMascota.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-18T02:55:02.128Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Mascotas.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Mascotas.aspx.designer.cs",
-              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\Mascotas.aspx.designer.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Mascotas.aspx.designer.cs",
-              "RelativeToolTip": "tpcuatrimestral\\Vistas\\Mascotas.aspx.designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Title": "Veterinario.cs",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral-master\\tpcuatrimestral\\Dominio\\Veterinario.cs",
+              "RelativeDocumentMoniker": "Dominio\\Veterinario.cs",
+              "ToolTip": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral-master\\tpcuatrimestral\\Dominio\\Veterinario.cs",
+              "RelativeToolTip": "Dominio\\Veterinario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T02:49:56.825Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Mascotas.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Mascotas.aspx.cs",
-              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\Mascotas.aspx.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Mascotas.aspx.cs",
-              "RelativeToolTip": "tpcuatrimestral\\Vistas\\Mascotas.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T02:49:54.428Z",
+              "WhenOpened": "2025-07-03T20:48:16.933Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Mascotas.aspx",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Mascotas.aspx",
-              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\Mascotas.aspx",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Mascotas.aspx",
-              "RelativeToolTip": "tpcuatrimestral\\Vistas\\Mascotas.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Title": "Turno.cs",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral-master\\tpcuatrimestral\\Dominio\\Turno.cs",
+              "RelativeDocumentMoniker": "Dominio\\Turno.cs",
+              "ToolTip": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral-master\\tpcuatrimestral\\Dominio\\Turno.cs",
+              "RelativeToolTip": "Dominio\\Turno.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAswBQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T20:07:03.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TurnoNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral-master\\tpcuatrimestral\\Negocio\\TurnoNegocio.cs",
+              "RelativeDocumentMoniker": "Negocio\\TurnoNegocio.cs",
+              "ToolTip": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral-master\\tpcuatrimestral\\Negocio\\TurnoNegocio.cs",
+              "RelativeToolTip": "Negocio\\TurnoNegocio.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAgwDYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T20:10:53.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Turnos.aspx",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral-master\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Turnos\\Turnos.aspx",
+              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\Turnos\\Turnos.aspx",
+              "ToolTip": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral-master\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Turnos\\Turnos.aspx",
+              "RelativeToolTip": "tpcuatrimestral\\Vistas\\Turnos\\Turnos.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-18T02:48:58.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-03T19:13:15.561Z"
             }
           ]
         }
