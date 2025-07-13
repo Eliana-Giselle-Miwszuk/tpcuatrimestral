@@ -114,7 +114,41 @@ namespace Negocio
                 _datos.cerrarConexion();
             }
         }
+        public Usuario BuscarPorDNI(long dni)
+        {
+            try
+            {
+                _datos.setearConsulta(
+                    "SELECT idUsuario, Dni, nombreUsuario, tipoUsuario, usuMaster, fechaRegistro " +
+                    "FROM Usuarios " +
+                    "WHERE Dni = @dni AND activo = 1");
 
+                _datos.setearParametro("@dni", dni);
+                _datos.ejecutarLectura();
+
+                if (_datos.Lector.Read())
+                {
+                    return new Usuario
+                    {
+                        IdUsuario = Convert.ToInt32(_datos.Lector["idUsuario"]),
+                        Dni = Convert.ToInt64(_datos.Lector["Dni"]),
+                        NombreUsuario = _datos.Lector["nombreUsuario"].ToString(),
+                        TipoUsuario = _datos.Lector["tipoUsuario"].ToString(),
+                        UsuMaster = Convert.ToBoolean(_datos.Lector["usuMaster"]),
+                        FechaRegistro = Convert.ToDateTime(_datos.Lector["fechaRegistro"])
+                    };
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al buscar usuario por DNI", ex);
+            }
+            finally
+            {
+                _datos.cerrarConexion();
+            }
+        }
         /*public int CrearUsuario(Usuario nuevoUsuario)
         {
             try

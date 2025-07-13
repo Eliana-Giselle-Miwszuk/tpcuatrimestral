@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|c:\\users\\eligi\\documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\mascotas\\agregarmascota.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\mascotas\\agregarmascota.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|c:\\users\\eligi\\documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\veterinarios\\listarveterinarios.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\veterinarios\\listarveterinarios.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6074B05-1B76-4E5C-B49C-B9FE9837C07B}|Negocio\\Negocio.csproj|C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\negocio\\due\u00F1onegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6074B05-1B76-4E5C-B49C-B9FE9837C07B}|Negocio\\Negocio.csproj|solutionrelative:negocio\\due\u00F1onegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|c:\\users\\eligi\\documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\veterinarios\\listarveterinarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\veterinarios\\listarveterinarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6074B05-1B76-4E5C-B49C-B9FE9837C07B}|Negocio\\Negocio.csproj|C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\negocio\\mascotanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6074B05-1B76-4E5C-B49C-B9FE9837C07B}|Negocio\\Negocio.csproj|solutionrelative:negocio\\mascotanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|c:\\users\\eligi\\documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\due\u00F1os\\listadue\u00F1o.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\due\u00F1os\\listadue\u00F1o.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\mascotas\\agregarmascota.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\mascotas\\agregarmascota.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|c:\\users\\eligi\\documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\due\u00F1os\\listadue\u00F1o.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\due\u00F1os\\listadue\u00F1o.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\veterinarios\\agregarveterinarios.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\veterinarios\\agregarveterinarios.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\vistas\\veterinarios\\agregarveterinarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEDACEBB-8CB8-4CFB-8DE9-0BE3375FF63F}|tpcuatrimestral\\tpcuatrimestral.csproj|solutionrelative:tpcuatrimestral\\vistas\\veterinarios\\agregarveterinarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6074B05-1B76-4E5C-B49C-B9FE9837C07B}|Negocio\\Negocio.csproj|c:\\users\\eligi\\documents\\tpcuatrimestral\\tpcuatrimestral\\negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6074B05-1B76-4E5C-B49C-B9FE9837C07B}|Negocio\\Negocio.csproj|solutionrelative:negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,52 +46,94 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MascotaNegocio.cs",
-              "DocumentMoniker": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\Negocio\\MascotaNegocio.cs",
-              "RelativeDocumentMoniker": "Negocio\\MascotaNegocio.cs",
-              "ToolTip": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\Negocio\\MascotaNegocio.cs",
-              "RelativeToolTip": "Negocio\\MascotaNegocio.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAowKgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ListaDue\u00F1o.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Due\u00F1os\\ListaDue\u00F1o.aspx.cs",
+              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\Due\u00F1os\\ListaDue\u00F1o.aspx.cs",
+              "ToolTip": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Due\u00F1os\\ListaDue\u00F1o.aspx.cs",
+              "RelativeToolTip": "tpcuatrimestral\\Vistas\\Due\u00F1os\\ListaDue\u00F1o.aspx.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T16:42:14.963Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Due\u00F1oNegocio.cs",
-              "DocumentMoniker": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\Negocio\\Due\u00F1oNegocio.cs",
-              "RelativeDocumentMoniker": "Negocio\\Due\u00F1oNegocio.cs",
-              "ToolTip": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\Negocio\\Due\u00F1oNegocio.cs",
-              "RelativeToolTip": "Negocio\\Due\u00F1oNegocio.cs",
-              "ViewState": "AgIAABUBAAAAAAAAAAAswCIBAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T16:42:04.028Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AgregarMascota.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Mascotas\\AgregarMascota.aspx.cs",
-              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\Mascotas\\AgregarMascota.aspx.cs",
-              "ToolTip": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Mascotas\\AgregarMascota.aspx.cs",
-              "RelativeToolTip": "tpcuatrimestral\\Vistas\\Mascotas\\AgregarMascota.aspx.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAwwDAAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T16:37:26.993Z",
+              "WhenOpened": "2025-07-13T19:34:45.323Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AgregarMascota.aspx",
-              "DocumentMoniker": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Mascotas\\AgregarMascota.aspx",
-              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\Mascotas\\AgregarMascota.aspx",
-              "ToolTip": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Mascotas\\AgregarMascota.aspx",
-              "RelativeToolTip": "tpcuatrimestral\\Vistas\\Mascotas\\AgregarMascota.aspx",
+              "DocumentIndex": 2,
+              "Title": "ListaDue\u00F1o.aspx",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Due\u00F1os\\ListaDue\u00F1o.aspx",
+              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\Due\u00F1os\\ListaDue\u00F1o.aspx",
+              "ToolTip": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Due\u00F1os\\ListaDue\u00F1o.aspx",
+              "RelativeToolTip": "tpcuatrimestral\\Vistas\\Due\u00F1os\\ListaDue\u00F1o.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-07-13T16:37:22.617Z"
+              "WhenOpened": "2025-07-13T19:34:34.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ListarVeterinarios.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Veterinarios\\ListarVeterinarios.aspx.cs",
+              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\Veterinarios\\ListarVeterinarios.aspx.cs",
+              "ToolTip": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Veterinarios\\ListarVeterinarios.aspx.cs",
+              "RelativeToolTip": "tpcuatrimestral\\Vistas\\Veterinarios\\ListarVeterinarios.aspx.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAA7wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T19:32:57.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ListarVeterinarios.aspx",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Veterinarios\\ListarVeterinarios.aspx",
+              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\Veterinarios\\ListarVeterinarios.aspx",
+              "ToolTip": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Veterinarios\\ListarVeterinarios.aspx",
+              "RelativeToolTip": "tpcuatrimestral\\Vistas\\Veterinarios\\ListarVeterinarios.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-07-13T19:32:44.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UsuarioNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\Negocio\\UsuarioNegocio.cs",
+              "RelativeDocumentMoniker": "Negocio\\UsuarioNegocio.cs",
+              "ToolTip": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\Negocio\\UsuarioNegocio.cs",
+              "RelativeToolTip": "Negocio\\UsuarioNegocio.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAswJYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T19:23:10.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AgregarVeterinarios.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Veterinarios\\AgregarVeterinarios.aspx.cs",
+              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\Veterinarios\\AgregarVeterinarios.aspx.cs",
+              "ToolTip": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Veterinarios\\AgregarVeterinarios.aspx.cs",
+              "RelativeToolTip": "tpcuatrimestral\\Vistas\\Veterinarios\\AgregarVeterinarios.aspx.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAuwDYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T17:36:59.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AgregarVeterinarios.aspx",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Veterinarios\\AgregarVeterinarios.aspx",
+              "RelativeDocumentMoniker": "tpcuatrimestral\\Vistas\\Veterinarios\\AgregarVeterinarios.aspx",
+              "ToolTip": "C:\\Users\\EliGi\\Documents\\tpcuatrimestral\\tpcuatrimestral\\tpcuatrimestral\\Vistas\\Veterinarios\\AgregarVeterinarios.aspx",
+              "RelativeToolTip": "tpcuatrimestral\\Vistas\\Veterinarios\\AgregarVeterinarios.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-07-13T17:33:50.761Z",
+              "EditorCaption": ""
             }
           ]
         }

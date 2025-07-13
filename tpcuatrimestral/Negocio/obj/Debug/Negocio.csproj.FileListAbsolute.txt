@@ -16,15 +16,6 @@ C:\Users\benja\Desktop\Tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\Negocio\o
 C:\Users\benja\Desktop\Tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\benja\Desktop\Tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\Negocio\obj\Debug\Negocio.dll
 C:\Users\benja\Desktop\Tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\Negocio\obj\Debug\Negocio.pdb
-C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\bin\Debug\Negocio.dll
-C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\bin\Debug\Negocio.pdb
-C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\bin\Debug\Dominio.dll
-C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\bin\Debug\Dominio.pdb
-C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
-C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
-C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\obj\Debug\Negocio.csproj.Up2Date
-C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\obj\Debug\Negocio.dll
-C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\obj\Debug\Negocio.pdb
 C:\Users\benja\Desktop\Eliana\tpcuatrimestral-master\tpcuatrimestral-master\tpcuatrimestral\Negocio\bin\Debug\Negocio.dll
 C:\Users\benja\Desktop\Eliana\tpcuatrimestral-master\tpcuatrimestral-master\tpcuatrimestral\Negocio\bin\Debug\Negocio.pdb
 C:\Users\benja\Desktop\Eliana\tpcuatrimestral-master\tpcuatrimestral-master\tpcuatrimestral\Negocio\bin\Debug\Dominio.dll
@@ -70,3 +61,12 @@ C:\Users\USUARIO\Desktop\Tp cuatrimestral Jesus\tpcuatrimestral\tpcuatrimestral\
 C:\Users\USUARIO\Desktop\Tp cuatrimestral Jesus\tpcuatrimestral\tpcuatrimestral\Negocio\obj\Debug\Negocio.csproj.Up2Date
 C:\Users\USUARIO\Desktop\Tp cuatrimestral Jesus\tpcuatrimestral\tpcuatrimestral\Negocio\obj\Debug\Negocio.dll
 C:\Users\USUARIO\Desktop\Tp cuatrimestral Jesus\tpcuatrimestral\tpcuatrimestral\Negocio\obj\Debug\Negocio.pdb
+C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\bin\Debug\Negocio.dll
+C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\bin\Debug\Negocio.pdb
+C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\bin\Debug\Dominio.dll
+C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\bin\Debug\Dominio.pdb
+C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\obj\Debug\Negocio.dll
+C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\Negocio\obj\Debug\Negocio.pdb

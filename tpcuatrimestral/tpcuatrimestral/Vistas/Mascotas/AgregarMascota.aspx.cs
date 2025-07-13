@@ -109,17 +109,31 @@ namespace tpcuatrimestral.Vistas
                 string nombre = TxtNombre.Text;
                 string sexo = DdlSexo.SelectedValue;
                 string color = TextColor.Text;
-                Decimal peso = Convert.ToDecimal(TextPeso.Text);
 
+                // Validación mejorada del peso
                 if (validacion.ParametrosNoVacio(new string[] { idDueño, iDRaza, nombre, sexo, color }) == false)
                 {
-                    lblValidacion.Text = "ERROR CAMPOS OBLIGATORIOS";
+                    lblValidacion.Text = "ERROR: TODOS LOS CAMPOS SON OBLIGATORIOS";
+                    lblValidacion.CssClass = "text-danger";
+                    lblValidacion.Visible = true;
+                    return;
+                }
+
+                decimal peso;
+
+                if (!decimal.TryParse(TextPeso.Text, out peso))
+                {
+                    lblValidacion.Text = "El peso debe ser un número válido (ej: 12.5)";
+                    lblValidacion.CssClass = "text-danger";
+                    lblValidacion.Visible = true;
                     return;
                 }
 
                 if (validacion.DecimalNoNegativo(peso) == false)
                 {
-                    lblValidacion.Text = "PESO DEBE SER POSITIVO";
+                    lblValidacion.Text = "ERROR: EL PESO DEBE SER UN NÚMERO POSITIVO";
+                    lblValidacion.CssClass = "text-danger";
+                    lblValidacion.Visible = true;
                     return;
                 }
 
@@ -127,12 +141,12 @@ namespace tpcuatrimestral.Vistas
                 {
                     Mascota mascota = new Mascota
                     {
-                        IDDueño = Convert.ToInt32(idDueño), // Usar el ID del campo oculto
+                        IDDueño = Convert.ToInt32(idDueño),
                         IDRaza = Convert.ToInt32(DdlRaza.SelectedValue),
                         Nombre = TxtNombre.Text,
                         Sexo = DdlSexo.SelectedValue,
                         Color = TextColor.Text,
-                        Peso = Convert.ToDecimal(TextPeso.Text),
+                        Peso = peso, // Usamos la variable ya validada
                         FechaRegistro = DateTime.Now,
                         Activo = true
                     };
@@ -144,7 +158,11 @@ namespace tpcuatrimestral.Vistas
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex);
+                    // Mostrar el error real para diagnóstico
+                    lblValidacion.Text = "Error al guardar: " + ex.Message;
+                    lblValidacion.CssClass = "text-danger";
+                    lblValidacion.Visible = true;
+                    Console.WriteLine(ex.ToString());
                 }
             }
         }

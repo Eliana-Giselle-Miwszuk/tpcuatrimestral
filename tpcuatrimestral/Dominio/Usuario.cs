@@ -10,6 +10,7 @@ namespace Dominio
     {
   
         public int IdUsuario { get; set; }
+        public long Dni { get; set; }
         public string NombreUsuario { get; set; }
         public string Contrasena { get; set; }
         public string TipoUsuario { get; set; }
