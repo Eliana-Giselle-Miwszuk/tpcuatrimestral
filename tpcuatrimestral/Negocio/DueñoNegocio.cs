@@ -20,7 +20,7 @@ namespace Negocio
                            Telefono, Email, FechaRegistro, Activo 
                     FROM Dueños
                     WHERE Activo = 1
-                    ORDER BY Apellido, Nombre, FechaRegistro");
+                    ORDER BY FechaRegistro DESC, Apellido");
 
                 datos.ejecutarLectura();
 
@@ -28,15 +28,15 @@ namespace Negocio
                 {
                     Dueño dueño = new Dueño
                     {
-                        IdDueño       = Convert.ToInt32(datos.Lector["IDDueño"]),
-                        Dni           = Convert.ToInt64(datos.Lector["Dni"]),
-                        Apellido      = datos.Lector["Apellido"].ToString(),
-                        Nombre        = datos.Lector["Nombre"].ToString(),
-                        Direccion     = datos.Lector["Direccion"].ToString(),
-                        Telefono      = Convert.ToInt64(datos.Lector["Telefono"]),
-                        email         = datos.Lector["Email"].ToString(),
+                        IdDueño = Convert.ToInt32(datos.Lector["IDDueño"]),
+                        Dni = Convert.ToInt64(datos.Lector["Dni"]),
+                        Apellido = datos.Lector["Apellido"].ToString(),
+                        Nombre = datos.Lector["Nombre"].ToString(),
+                        Direccion = datos.Lector["Direccion"].ToString(),
+                        Telefono = Convert.ToInt64(datos.Lector["Telefono"]),
+                        email = datos.Lector["Email"].ToString(),
                         FechaRegistro = Convert.ToDateTime(datos.Lector["FechaRegistro"]),
-                        Activo        = Convert.ToBoolean(datos.Lector["Activo"])
+                        Activo = Convert.ToBoolean(datos.Lector["Activo"])
                     };
 
                     lista.Add(dueño);
@@ -54,22 +54,22 @@ namespace Negocio
 
         }
         public List<KeyValuePair<int, string>> ListarDueñosActivos()
+        {
+            try
             {
-                try
-                {
-                    return datos.CargarDesplegable(
-                        tabla: "Dueños",
-                        idColumna: "IDDueño",
-                        textoColumna: "Apellido + ', ' + Nombre as NombreCompleto",
-                        condiciones: "Activo = @activo",
-                        parametros: new Dictionary<string, object> { { "activo", true } }
-                    );
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                return datos.CargarDesplegable(
+                    tabla: "Dueños",
+                    idColumna: "IDDueño",
+                    textoColumna: "Apellido + ', ' + Nombre as NombreCompleto",
+                    condiciones: "Activo = @activo",
+                    parametros: new Dictionary<string, object> { { "activo", true } }
+                );
             }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         /*    public bool EliminarMasco(int nro)
         {
@@ -92,14 +92,17 @@ namespace Negocio
         }*/
         public bool EliminarDueño(int dni)
         {
-            try {
+            try
+            {
                 var parametro = new Dictionary<string, object> { { "Activo", false } };
                 var condicion = $"Dni = {dni}";
                 int filasAfectadas = datos.Actualizar("Dueños", parametro, condicion);
                 return filasAfectadas > 0;
 
-            
-            } catch {
+
+            }
+            catch
+            {
                 return false;
             }
         }
@@ -243,19 +246,57 @@ namespace Negocio
         }*/
         public int InsertarDueño(Dueño dueño)
         {
-            try {
+            try
+            {
                 var parametros = new Dictionary<string, object>
                 {
                     { "Dni",dueño.Dni },
                     { "Apellido" , dueño.Apellido},
-                    { "Nombre", dueño.Apellido },
+                    { "Nombre", dueño.Nombre },
                     {"Direccion",dueño.Direccion },
                     {"Telefono",dueño.Telefono },
                     {"Email",dueño.email }
                 };
                 return datos.Insertar("Dueños", parametros);
-            } catch {
+            }
+            catch
+            {
                 return -1;
+            }
+        }
+
+        public Dueño BuscarPorDNI(long dni)
+        {
+            try
+            {
+                datos.setearConsulta("SELECT * FROM Dueños WHERE Dni = @dni AND Activo = 1");
+                datos.setearParametro("@dni", dni);
+                datos.ejecutarLectura();
+
+                if (datos.Lector.Read())
+                {
+                    return new Dueño
+                    {
+                        IdDueño = Convert.ToInt32(datos.Lector["IDDueño"]),
+                        Dni = Convert.ToInt64(datos.Lector["Dni"]),
+                        Apellido = datos.Lector["Apellido"].ToString(),
+                        Nombre = datos.Lector["Nombre"].ToString(),
+                        /* Direccion     = datos.Lector["Direccion"].ToString(),
+                         Telefono      = Convert.ToInt64(datos.Lector["Telefono"]),
+                         email         = datos.Lector["Email"].ToString(),
+                         FechaRegistro = Convert.ToDateTime(datos.Lector["FechaRegistro"]),
+                         Activo        = Convert.ToBoolean(datos.Lector["Activo"])*/
+                    };
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al buscar dueño por DNI", ex);
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
     }

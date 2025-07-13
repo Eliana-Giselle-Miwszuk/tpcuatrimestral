@@ -53,7 +53,7 @@ namespace tpcuatrimestral.Vistas
             {
                 try
                 {
-                    string _dni = txtDni.Text.Trim(); 
+                    string _dni = txtDni.Text.Trim();
                     string _apellido = txtApellido.Text.Trim();
                     string _nombre = txtNombre.Text.Trim();
                     string _direccion = txtDireccion.Text.Trim();
@@ -78,7 +78,7 @@ namespace tpcuatrimestral.Vistas
                         lblCartel.Text = "DNI O TELÉFONO NO PUEDEN SER NEGATIVOS.";
                         return;
                     }
-                    if (!validacion.EsEmailValido(_email))  
+                    if (!validacion.EsEmailValido(_email))
                     {
                         lblCartel.Text = "FORMATO INCORRECTO EN EMAIL.";
                         return;
@@ -97,7 +97,7 @@ namespace tpcuatrimestral.Vistas
                     int id = negocioD.InsertarDueño(dueño);
                     if (id > 0)
                     {
-                        Response.Redirect("~/Vistas/Dueños/ListaDueño.aspx", false); 
+                        Response.Redirect("~/Vistas/Dueños/ListaDueño.aspx", false);
                     }
                     else
                     {
@@ -106,9 +106,9 @@ namespace tpcuatrimestral.Vistas
                 }
                 catch (Exception ex)
                 {
-                 
+
                     lblCartel.Text = "ERROR: " + ex.Message;
-                    Debug.WriteLine(ex.ToString()); 
+                    Debug.WriteLine(ex.ToString());
                 }
             }
 
@@ -126,6 +126,10 @@ namespace tpcuatrimestral.Vistas
             txtDireccion.Text = string.Empty;
             txtTelefono.Text = string.Empty;
             txtDni.Text = string.Empty;
+        }
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListaDueño.aspx");
         }
     }
 }

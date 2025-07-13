@@ -3,70 +3,112 @@
     Inherits="tpcuatrimestral.Vistas.ListaDueño" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .grid-view {
-            width: 100%;
-            margin-top: 20px;
+    <style>
+        .card-grid {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
         }
-        .grid-view th {
-            background-color: #f8f9fa;
-            text-align: left;
-            padding: 8px;
+        .table-header-custom {
+            background-color: #4e73df;
+            color: white;
         }
-        .grid-view td {
-            padding: 8px;
-            border-bottom: 1px solid #dee2e6;
+        .table > :not(:first-child) {
+            border-top: none;
+        }
+        .btn-action {
+            min-width: 80px;
+            margin: 2px;
+        }
+        .empty-grid {
+            padding: 2rem;
+            text-align: center;
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+        .pagination-custom .page-item.active .page-link {
+            background-color: #4e73df;
+            border-color: #4e73df;
+        }
+        .pagination-custom .page-link {
+            color: #4e73df;
         }
     </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container mt-4">
-        <h2 class="mb-4">Listado de Dueños Activos</h2>
-        <p class="mb-4">&nbsp;
-            <asp:LinkButton ID="lbkCrear" Class="btn btn-primary"  runat="server" Height="45px" PostBackUrl="~/Vistas/Dueños/AgregarDueño.aspx" Width="197px">Crear Dueño</asp:LinkButton>
-        </p>
-        <p class="mb-4">&nbsp;</p>
-        
-     <asp:GridView ID="dgvDueños" runat="server"
-    AutoGenerateColumns="False"
-    DataKeyNames="Dni"
-    CssClass="grid-view table table-striped table-bordered"
-    GridLines="None"
-    OnRowCommand="dgvDueños_RowCommand" AllowPaging="True" OnPageIndexChanging="dgvDueños_PageIndexChanging" PageSize="5">
-    <Columns>
-        <asp:BoundField DataField="Dni" HeaderText="DNI" DataFormatString="{0:0}" />
-        <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
-        <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
-        <asp:BoundField DataField="Direccion" HeaderText="Dirección" />
-        <asp:BoundField DataField="Telefono" HeaderText="Teléfono" DataFormatString="{0:0}" />
-        <asp:BoundField DataField="email" HeaderText="Email" />
-        <asp:BoundField DataField="FechaRegistro" HeaderText="Registro" DataFormatString="{0:dd/MM/yyyy}" />
-        <asp:CheckBoxField DataField="Activo" HeaderText="Activo" ReadOnly="true" />
+    <div class="container-fluid py-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="h4 mb-0 text-gray-800 font-weight-bold">
+                <i class="fas fa-users fa-fw mr-2"></i>Listado de Dueños
+            </h2>
+            <asp:LinkButton ID="lbkCrear" runat="server" 
+                PostBackUrl="~/Vistas/Dueños/AgregarDueño.aspx" 
+                CssClass="btn btn-primary btn-icon-split">
+                <span class="icon text-white-50">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Nuevo Dueño</span>
+            </asp:LinkButton>
+        </div>
 
-        <asp:TemplateField HeaderText="Acciones">
-            <ItemTemplate>
-                <asp:LinkButton ID="btnEditar" runat="server"
-                    Text="Editar"
-                    CommandName="Editar"
-                    CommandArgument='<%# Eval("Dni") %>'
-                    CssClass="btn btn-warning btn-sm" />
+        <div class="card shadow mb-4 card-grid">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <asp:GridView ID="dgvDueños" runat="server"
+                        AutoGenerateColumns="False"
+                        DataKeyNames="Dni"
+                        CssClass="table table-hover"
+                        GridLines="None"
+                        OnRowCommand="dgvDueños_RowCommand" 
+                        AllowPaging="True" 
+                        OnPageIndexChanging="dgvDueños_PageIndexChanging" 
+                        PageSize="5"
+                        PagerStyle-CssClass="pagination-custom"
+                        HeaderStyle-CssClass="table-header-custom">
+                        
+                        <Columns>
+                            <asp:BoundField DataField="FechaRegistro" HeaderText="Registro" DataFormatString="{0:dd/MM/yyyy}" />
+                            <asp:BoundField DataField="Dni" HeaderText="DNI" DataFormatString="{0:0}" />
+                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
+                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+                            <asp:BoundField DataField="Direccion" HeaderText="Dirección" />
+                            <asp:BoundField DataField="Telefono" HeaderText="Teléfono" DataFormatString="{0:0}" />
+                            <asp:BoundField DataField="email" HeaderText="Email" />
+                            <asp:CheckBoxField DataField="Activo" HeaderText="Activo" ReadOnly="true" ItemStyle-HorizontalAlign="Center" />
 
-                <asp:LinkButton ID="btnEliminar" runat="server"
-                    Text="Eliminar"
-                    CommandName="Eliminar"
-                    CommandArgument='<%# Eval("Dni") %>'
-                    CssClass="btn btn-danger btn-sm"
-                    OnClientClick="return confirm('¿Estás seguro de eliminar este dueño?');" />
-            </ItemTemplate>
-        </asp:TemplateField>
-    </Columns>
+                            <asp:TemplateField HeaderText="Acciones" ItemStyle-CssClass="text-nowrap">
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="btnEditar" runat="server"
+                                        CommandName="Editar"
+                                        CommandArgument='<%# Eval("Dni") %>'
+                                        CssClass="btn btn-warning btn-sm btn-action"
+                                        ToolTip="Editar">
+                                        <i class="fas fa-edit"></i> Editar
+                                    </asp:LinkButton>
 
-    <EmptyDataTemplate>
-        <div class="alert alert-info">No se encontraron dueños registrados</div>
-    </EmptyDataTemplate>
-</asp:GridView>
+                                    <asp:LinkButton ID="btnEliminar" runat="server"
+                                        CommandName="Eliminar"
+                                        CommandArgument='<%# Eval("Dni") %>'
+                                        CssClass="btn btn-danger btn-sm btn-action"
+                                        OnClientClick="return confirm('¿Estás seguro de eliminar este dueño?');"
+                                        ToolTip="Eliminar">
+                                        <i class="fas fa-trash-alt"></i> Eliminar
+                                    </asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
 
-
+                        <EmptyDataTemplate>
+                            <div class="empty-grid">
+                                <i class="fas fa-info-circle fa-2x mb-3"></i>
+                                <h5 class="text-gray-800">No se encontraron dueños registrados</h5>
+                                <p class="mb-0">Utilice el botón "Nuevo Dueño" para agregar uno</p>
+                            </div>
+                        </EmptyDataTemplate>
+                    </asp:GridView>
+                </div>
+            </div>
+        </div>
     </div>
 </asp:Content>

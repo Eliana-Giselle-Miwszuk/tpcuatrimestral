@@ -13,6 +13,7 @@ namespace Negocio
     {
         AccesoDatos accesoDatos = new AccesoDatos();
 
+        //-----// //AGREGAR MASCOTA
         public int AgregarMascota(Mascota mascota)
         {
             try
@@ -36,18 +37,20 @@ namespace Negocio
                 throw ex;
             }
         }
-
         public List<Mascota> ListarMascotas()
         {
-            try {
+            try
+            {
                 string condiciones = "Activo=@activo";
                 var parametros = new Dictionary<string, object>
                 {
                     {"Activo",true }
                 };
-                var mascotas = accesoDatos.Listar<Mascota>("Mascotas", condiciones,parametros,MapeoMascota);
+                var mascotas = accesoDatos.Listar<Mascota>("Mascotas", condiciones, parametros, MapeoMascota);
                 return mascotas;
-            } catch {
+            }
+            catch
+            {
                 return null;
             }
         }
@@ -64,7 +67,8 @@ namespace Negocio
                 var condicion = "NroHistoriaClinica= " + mascota.NroHistoriaClinica;
                 int filasAfectadas = accesoDatos.Actualizar("Mascotas", parametros, condicion);
                 return filasAfectadas > 0;
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
 
                 return false;
@@ -146,7 +150,7 @@ namespace Negocio
         {
             { "Activo", false }
         };
-                var condicion = $"NroHistoriaClinica = {nro}"; 
+                var condicion = $"NroHistoriaClinica = {nro}";
                 int filasAfectadas = accesoDatos.Actualizar("Mascotas", parametros, condicion);
                 return filasAfectadas > 0;
             }
@@ -156,6 +160,7 @@ namespace Negocio
                 return false;
             }
         }
+
 
 
 
