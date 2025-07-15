@@ -1,7 +1,9 @@
-Create Database Gestion_Veterinaria_PRO
+USE MASTER
+GO
+Create Database Gestion_Veterinaria_1
 Collate Latin1_General_CI_AI
 Go
-USE Gestion_Veterinaria_PRO
+USE Gestion_Veterinaria_1
 
 CREATE TABLE Dueños (
     IDDueño INT NOT NULL PRIMARY KEY IDENTITY (1, 1),
@@ -15,7 +17,18 @@ CREATE TABLE Dueños (
     Activo BIT NOT NULL DEFAULT 1
 );
 GO
+CREATE TABLE Usuarios (
+    idUsuario INT PRIMARY KEY IDENTITY(1,1),  -- Identificador único autoincremental
+	dni BIGINT UNIQUE NOT NULL CHECK (Dni > 0),
+    nombreUsuario VARCHAR(50) NOT NULL UNIQUE,  -- Nombre de usuario único (ej: "jdoe")
+    contrasena VARCHAR(255) NOT NULL,  -- Contraseña (debe almacenarse como hash)
+    tipoUsuario VARCHAR(20) NOT NULL CHECK (tipoUsuario IN ('Admisionista', 'Veterinario')),
+	usuMaster BIT NOT NULL DEFAULT 0,
+    fechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),  -- Fecha de creación
+    activo BIT NOT NULL DEFAULT 1  -- Indica si el usuario está activo (1) o inactivo (0)
+);
 
+GO
 CREATE TABLE Especies (
     IDEspecie INT NOT NULL PRIMARY KEY IDENTITY (1, 1),
     NombreEspecie NVARCHAR(100) UNIQUE NOT NULL,
@@ -61,7 +74,8 @@ CREATE TABLE Veterinarios (
     MatriculaNacional BIGINT UNIQUE NOT NULL CHECK (MatriculaNacional > 1),
     MatriculaProvincial BIGINT UNIQUE NOT NULL CHECK (MatriculaProvincial > 1),
     IDEspecialidad INT NOT NULL FOREIGN KEY REFERENCES EspecialidadesVeterinarios(IDEspecialidad),
-    FechaRegistro DATE NOT NULL DEFAULT (GETDATE()),
+    IdUsuario INT FOREIGN KEY REFERENCES Usuarios(idUsuario),
+	FechaRegistro DATE NOT NULL DEFAULT (GETDATE()),
     Activo BIT NOT NULL DEFAULT 1
 );
 GO
@@ -97,4 +111,67 @@ CREATE TABLE HistoriasClinicas (
     FechaRegistro DATE NOT NULL DEFAULT (GETDATE()),
     Activo BIT NOT NULL DEFAULT 1   
 );
+GO
 
+CREATE TABLE MetodosPagos (
+    IDMetodosPago INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
+    TipoMetodosPago NVARCHAR(50) NOT NULL UNIQUE
+);
+GO
+
+CREATE TABLE Pagos (
+    IDPago INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
+    IDRegistro INT NOT NULL FOREIGN KEY REFERENCES HistoriasClinicas(IDRegistro) UNIQUE,
+    FechaHoraPago DATETIME NOT NULL DEFAULT (GETDATE()),
+    IDMetodosPago INT NOT NULL FOREIGN KEY REFERENCES MetodosPagos(IDMetodosPago),
+    ImporteTotal MONEY NOT NULL CHECK (ImporteTotal > 0),
+    Pagado BIT NOT NULL DEFAULT 0,
+    Detalles NVARCHAR(300),
+    FechaRegistro DATE NOT NULL DEFAULT (GETDATE()),
+    Activo BIT NOT NULL DEFAULT 1
+);
+GO
+-- AGREGO TABLA USUARIOS
+
+-- Tabla para Admisionistas (sin afectar tablas existentes)
+CREATE TABLE Admisionistas (
+    IDAdmisionista INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
+    Dni BIGINT UNIQUE NOT NULL CHECK (Dni > 0),
+    Apellido NVARCHAR(50) NOT NULL,
+    Nombre NVARCHAR(50) NOT NULL,
+    Direccion NVARCHAR(100) NOT NULL,
+    Telefono BIGINT NOT NULL CHECK (Telefono > 0),
+    Email NVARCHAR(100) NOT NULL UNIQUE,
+    FechaRegistro DATE NOT NULL DEFAULT (GETDATE()),
+    Activo BIT NOT NULL DEFAULT 1
+);
+
+
+-- Tabla Usuarios manteniendo todas tus relaciones actuales
+
+
+
+CREATE TABLE TiposUsuario (
+    idTipo INT PRIMARY KEY,
+    nombreTipo VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE HorarioVeterinario (
+    id_horario INT PRIMARY KEY IDENTITY(1,1),
+    id_veterinario INT NOT NULL,
+    
+    -- Días de la semana como columnas booleanas (usamos BIT en SQL Server)
+    lunes BIT DEFAULT 0,
+    martes BIT DEFAULT 0,
+    miercoles BIT DEFAULT 0,
+    jueves BIT DEFAULT 0,
+    viernes BIT DEFAULT 0,
+    sabado BIT DEFAULT 0,
+    domingo BIT DEFAULT 0,
+    
+    -- Horario fijo para todos los días
+    hora_apertura TIME NOT NULL,
+    hora_cierre TIME NOT NULL,
+    
+    FOREIGN KEY (id_veterinario) REFERENCES Veterinarios(IDVeterinario)
+);

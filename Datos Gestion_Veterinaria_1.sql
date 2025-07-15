@@ -1,4 +1,4 @@
-USE Gestion_Veterinaria_PRO;
+USE Gestion_Veterinaria_1;
 GO
 SET DATEFORMAT YMD;
 GO
@@ -41,12 +41,23 @@ INSERT INTO EspecialidadesVeterinarios (NombreEspecialidad) VALUES
 ('Cirugía'),
 ('Dermatología');
 GO
+INSERT INTO Usuarios (dni,nombreUsuario, contrasena, tipoUsuario,usuMaster, fechaRegistro, activo) VALUES
+(132,'mrodriguez', '456',  'Veterinario', 1 ,'2023-05-10', 1),
+(456,'mfernandez', '789',  'Veterinario', 0,'2023-06-15', 1),
+(789,'lgomez', '101', 'Veterinario',0,'2023-07-20', 1),
+(101,'recepcion1', '202', 'Admisionista', 1,'2023-02-15', 1),
+(102,'recepcion2', '303', 'Admisionista', 0,'2023-03-20', 1);
+go
+INSERT INTO Veterinarios (
+    Dni, Apellido, Nombre, Direccion, Telefono, Email, 
+    MatriculaNacional, MatriculaProvincial, IDEspecialidad, 
+    IdUsuario, FechaRegistro, Activo
+) VALUES
+(55443322, 'Rodríguez', 'Martín', 'Av. Roca 234', 3814556677, 'mrodriguez@vet.com', 1001, 5001, 1, 1, '2023-05-10', 1),
+(66778899, 'Fernández', 'María', 'Calle Rioja 345', 3814778899, 'mfernandez@vet.com', 1002, 5002, 2, 2, '2023-06-15', 1),
+(99887766, 'Gómez', 'Luciano', 'Bv. España 567', 3814987766, 'lgomez@vet.com', 1003, 5003, 3, 3, '2023-07-20', 1);
 
-INSERT INTO Veterinarios (Dni, Apellido, Nombre, Direccion, Telefono, Email, MatriculaNacional, MatriculaProvincial, IDEspecialidad, FechaRegistro, Activo) VALUES
-('55443322', 'Rodríguez', 'Martín', 'Av. Roca 234', '3814556677', 'mrodriguez@vet.com', 1001, 5001, 1, '2023-05-10', 1),
-('66778899', 'Fernández', 'María', 'Calle Rioja 345', '3814778899', 'mfernandez@vet.com', 1002, 5002, 2, '2023-06-15', 1),
-('99887766', 'Gómez', 'Luciano', 'Bv. España 567', '3814987766', 'lgomez@vet.com', 1003, 5003, 3, '2023-07-20', 1);
-GO
+go
 
 INSERT INTO EstadoTurnos (TipoEstado) VALUES
 ('En espera'),
@@ -55,6 +66,13 @@ INSERT INTO EstadoTurnos (TipoEstado) VALUES
 ('Cancelado');
 GO
 
+INSERT INTO MetodosPagos (TipoMetodosPago) VALUES
+('Efectivo'),
+('Tarjeta Debito'),
+('Tarjeta Crédito'),
+('Transferencia Bancaria'),
+('QR');
+GO
 
 INSERT INTO Turnos (FechaHoraTurno, NroHistoriaClinica, IDVeterinario, MotivoConsulta, IDEstadoTurno, FechaRegistro, Activo) VALUES
 ('2024-05-01 10:00', 1, 1, 'Chequeo anual', 1, '2024-04-20', 1),
@@ -74,3 +92,60 @@ INSERT INTO HistoriasClinicas (NroHistoriaClinica, IDTurno, FechaHoraCita, Sinto
 (6, 6, '2024-05-06 13:00', 'Revisión rutina', 'Buen estado general', 'Ninguno', NULL, 'Revisión en 6 meses', '2024-05-06', 1);
 GO
 
+INSERT INTO Pagos (IDRegistro, FechaHoraPago, IDMetodosPago, ImporteTotal, Pagado, Detalles, FechaRegistro, Activo) VALUES
+(1, '2024-05-01 10:30', 1, 2000.00, 1, 'Pagado en efectivo', '2024-05-01', 1),
+(2, '2024-05-02 15:00', 2, 3500.00, 0, 'Tarjeta pendiente', '2024-05-02', 1),
+(3, '2024-05-03 09:30', 3, 2500.00, 1, 'Pago MercadoPago', '2024-05-03', 1),
+(4, '2024-05-03 11:30', 1, 1500.00, 0, 'Pendiente', '2024-05-04', 1),
+(5, '2024-05-05 16:30', 2, 3000.00, 1, 'Tarjeta OK', '2024-05-05', 1);
+GO
+
+-- ################# USUARIOS ############### --
+INSERT INTO TiposUsuario VALUES 
+(1, 'Admisionista'),
+(2, 'Veterinario');
+
+
+GO
+
+-- Admisionista 1 (recepcion1)
+INSERT INTO Admisionistas (Dni, Apellido, Nombre, Direccion, Telefono, Email, FechaRegistro, Activo)
+VALUES (202, 'Recepcion1', 'Primero', 'Calle Principal 123', 3515552020, 'recepcion@vet.com', '2023-02-15', 1);
+go
+-- Admisionista 2 (recepcion2)
+INSERT INTO Admisionistas (Dni, Apellido, Nombre, Direccion, Telefono, Email, FechaRegistro, Activo)
+VALUES (303, 'Recepcion2', 'Segundo', 'Avenida Central 456', 3515553030, 'recepcion2@vet.com', '2023-03-20', 1);
+
+-- VETERINARIOS
+-- Horario para Martín Rodríguez (id_veterinario = 1)
+INSERT INTO HorarioVeterinario (
+    id_veterinario, 
+    lunes, martes, miercoles, jueves, viernes, sabado, domingo,
+    hora_apertura, hora_cierre
+) VALUES (
+    1, 
+    1, 1, 1, 1, 1, 0, 0,  -- Trabaja de lunes a viernes
+    '08:00:00', '18:00:00'
+);
+
+-- Horario para María Fernández (id_veterinario = 2)
+INSERT INTO HorarioVeterinario (
+    id_veterinario, 
+    lunes, martes, miercoles, jueves, viernes, sabado, domingo,
+    hora_apertura, hora_cierre
+) VALUES (
+    2, 
+    1, 1, 1, 0, 0, 1, 0,  -- Trabaja lunes, martes, miércoles y sábado
+    '09:00:00', '17:00:00'
+);
+
+-- Horario para Luciano Gómez (id_veterinario = 3)
+INSERT INTO HorarioVeterinario (
+    id_veterinario, 
+    lunes, martes, miercoles, jueves, viernes, sabado, domingo,
+    hora_apertura, hora_cierre
+) VALUES (
+    3, 
+    0, 0, 1, 1, 1, 1, 1,  -- Trabaja miércoles a domingo
+    '10:00:00', '20:00:00'
+);
