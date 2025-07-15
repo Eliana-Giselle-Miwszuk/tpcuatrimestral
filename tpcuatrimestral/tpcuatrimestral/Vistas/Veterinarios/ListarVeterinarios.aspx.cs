@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Negocio;
 using Dominio;
+using System.Diagnostics;
 
 namespace tpcuatrimestral.Vistas
 {
@@ -48,9 +49,15 @@ namespace tpcuatrimestral.Vistas
             else if (e.CommandName == "Agenda")
             {
                 int id = Convert.ToInt32(e.CommandArgument);
-                Response.Redirect($"AgendaVeterinario.aspx?id={id}");
+                Response.Redirect($"AgendaVetenaria.aspx?id={id}");
+            }
+            else if (e.CommandName == "GenerarAgenda")
+            {
+                int idVeterinario = Convert.ToInt32(e.CommandArgument);
+                GenerarAgendaBasica(idVeterinario);
             }
         }
+
 
         protected void btnBuscarNombre_Click(object sender, EventArgs e)
         {
@@ -93,6 +100,45 @@ namespace tpcuatrimestral.Vistas
         {
             gvVeterinarios.PageIndex = e.NewPageIndex;
             CargarGridview();
+        }
+
+        protected void GenerarAgendaBasica(int idVeterinario)
+        {
+            try
+            {
+                HorarioNegocio horarioNegocio = new HorarioNegocio();
+
+                // Verificar si ya existe un horario para este veterinario
+                if (horarioNegocio.ExisteHorarioParaVeterinario(idVeterinario))
+                {
+                    lblMensaje.Text = "Este veterinario ya tiene una agenda configurada.";
+                    lblMensaje.CssClass = "alert alert-warning";
+                    Debug.WriteLine("ID VETE Lista 1: " + idVeterinario);
+                }
+                else
+                {
+                    // Generar horario básico
+                    if (horarioNegocio.GenerarHorarioBasico(idVeterinario))
+                    {
+                        lblMensaje.Text = "Agenda básica generada exitosamente (Lunes a Viernes de 9:00 a 17:00).";
+                        lblMensaje.CssClass = "alert alert-success";
+                    }
+                    else
+                    {
+                        lblMensaje.Text = "No se pudo generar la agenda básica.";
+                        lblMensaje.CssClass = "alert alert-danger";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMensaje.Text = "Error al generar agenda: " + ex.Message;
+                lblMensaje.CssClass = "alert alert-danger";
+            }
+            finally
+            {
+                CargarGridview();
+            }
         }
     }
 }

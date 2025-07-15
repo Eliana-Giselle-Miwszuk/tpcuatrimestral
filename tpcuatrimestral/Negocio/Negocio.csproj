@@ -45,6 +45,7 @@
     <Compile Include="AdmisionistaNegocio.cs" />
     <Compile Include="DueñoNegocio.cs" />
     <Compile Include="HistoriaClinicaNegocio.cs" />
+    <Compile Include="HorarioNegocio.cs" />
     <Compile Include="MascotaNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RazaNegocio.cs" />

@@ -95,6 +95,7 @@
     <Content Include="Vistas\Turnos\TurnosXFechaRecep.aspx" />
     <Content Include="Vistas\Turnos\TurnosXFechaVete.aspx" />
     <Content Include="Vistas\VerTurno.aspx" />
+    <Content Include="Vistas\Veterinarios\AgendaVetenaria.aspx" />
     <Content Include="Vistas\Veterinarios\AgregarVeterinarios.aspx" />
     <Content Include="Vistas\Veterinarios\EditarVeterinario.aspx" />
     <Content Include="Vistas\Veterinarios\ListarVeterinarios.aspx" />
@@ -294,6 +295,13 @@
     </Compile>
     <Compile Include="Vistas\VerTurno.aspx.designer.cs">
       <DependentUpon>VerTurno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Veterinarios\AgendaVetenaria.aspx.cs">
+      <DependentUpon>AgendaVetenaria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Veterinarios\AgendaVetenaria.aspx.designer.cs">
+      <DependentUpon>AgendaVetenaria.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Veterinarios\AgregarVeterinarios.aspx.cs">
       <DependentUpon>AgregarVeterinarios.aspx</DependentUpon>

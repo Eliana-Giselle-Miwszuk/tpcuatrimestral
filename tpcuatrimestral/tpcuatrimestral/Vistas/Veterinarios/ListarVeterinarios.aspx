@@ -139,8 +139,15 @@
                                         CommandArgument='<%# Eval("IDVeterinario") %>'
                                         CssClass="btn btn-info btn-sm btn-action"
                                         ToolTip="Agenda">
-                                        <i class="fas fa-calendar-alt"></i> Agenda
+                                        <i class="fas fa-calendar-alt"></i> Editar Agenda
                                     </asp:LinkButton>
+
+                                    <asp:LinkButton ID="btnGenerarAgenda" runat="server"
+                                        CommandName="GenerarAgenda"
+                                        CommandArgument='<%# Eval("IDVeterinario") %>'
+                                        CssClass="btn btn-success btn-sm btn-action"
+                                        OnClientClick="return confirm('¿Generar agenda básica para este veterinario?');"
+                                        ToolTip="Generar Agenda Básica"><i class="fas fa-calendar-plus"></i> Generar Agenda</asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>

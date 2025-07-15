@@ -313,6 +313,8 @@ C:\Users\USUARIO\Desktop\Tp cuatrimestral Jesus\tpcuatrimestral\tpcuatrimestral\
 C:\Users\USUARIO\Desktop\Tp cuatrimestral Jesus\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\obj\Debug\tpcuatri.8A1C1A83.Up2Date
 C:\Users\USUARIO\Desktop\Tp cuatrimestral Jesus\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\obj\Debug\tpcuatrimestral.dll
 C:\Users\USUARIO\Desktop\Tp cuatrimestral Jesus\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\obj\Debug\tpcuatrimestral.pdb
+C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\obj\Debug\tpcuatrimestral.csproj.AssemblyReference.cache
+C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\obj\Debug\tpcuatrimestral.csproj.CoreCompileInputs.cache
 C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\bin\tpcuatrimestral.dll.config
 C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\bin\tpcuatrimestral.dll
 C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\bin\tpcuatrimestral.pdb
@@ -371,8 +373,6 @@ C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\bin\Neg
 C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\bin\Dominio.pdb
 C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\bin\Negocio.pdb
 C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\obj\Debug\tpcuatrimestral.csproj.AssemblyReference.cache
-C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\obj\Debug\tpcuatrimestral.csproj.CoreCompileInputs.cache
 C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\obj\Debug\tpcuatri.8A1C1A83.Up2Date
 C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\obj\Debug\tpcuatrimestral.dll
 C:\Users\EliGi\Documents\tpcuatrimestral\tpcuatrimestral\tpcuatrimestral\obj\Debug\tpcuatrimestral.pdb

@@ -123,13 +123,13 @@ namespace Negocio
         {
             //"ID,Nombre,Peso"
             var campos = string.Join(", ", parametros.Keys);
-            var valores = string.Join(", ", parametros.Keys.Select(k => "@" + k)); 
+            var valores = string.Join(", ", parametros.Keys.Select(k => "@" + k));
             comando.CommandText = $"INSERT INTO {tabla} ({campos}) VALUES ({valores}); SELECT SCOPE_IDENTITY();";
-            comando.CommandType = CommandType.Text; 
+            comando.CommandType = CommandType.Text;
             comando.Parameters.Clear();
 
             Debug.WriteLine($"Consulta SQL: {comando.CommandText}");
-            
+
             foreach (var param in parametros)
             {
                 comando.Parameters.AddWithValue("@" + param.Key, param.Value ?? DBNull.Value);
@@ -262,7 +262,7 @@ namespace Negocio
             }
             catch (Exception ex)
             {
-                
+
                 Debug.WriteLine($"Error al listar {tabla}: {ex.Message}\nStackTrace: {ex.StackTrace}");
                 throw new Exception($"Error al listar {tabla}", ex);
             }
@@ -317,6 +317,17 @@ namespace Negocio
                     conexion.Close();
             }
         }
+
+
+        public void limpiarParametros()
+        {
+            if (this.comando != null)
+            {
+                this.comando.Parameters.Clear();
+            }
+        }
+
+
 
     }
 }
