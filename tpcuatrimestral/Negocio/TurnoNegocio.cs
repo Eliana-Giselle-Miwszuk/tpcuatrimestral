@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -289,6 +290,198 @@ namespace Negocio
             }
 
             return turno;
+        }
+        public List<Veterinario> ListarVeterinariosDisponibles(DateTime fecha)
+        {
+            List<Veterinario> lista = new List<Veterinario>();
+            try
+            {
+                int diaSemana = (int)fecha.DayOfWeek;
+                datos.limpiarParametros();
+                datos.setearConsulta(@"
+                    SELECT v.IDVeterinario, v.Nombre, v.Apellido
+                    FROM Veterinarios v
+                    INNER JOIN HorarioVeterinario h ON v.IDVeterinario = h.id_veterinario
+                    WHERE v.Activo = 1 AND 
+                    (
+                        (h.domingo = 1 AND @diaSemana = 0) OR
+                        (h.lunes = 1 AND @diaSemana = 1) OR
+                        (h.martes = 1 AND @diaSemana = 2) OR
+                        (h.miercoles = 1 AND @diaSemana = 3) OR
+                        (h.jueves = 1 AND @diaSemana = 4) OR
+                        (h.viernes = 1 AND @diaSemana = 5) OR
+                        (h.sabado = 1 AND @diaSemana = 6)
+                    )");
+
+                datos.setearParametro("@diaSemana", diaSemana);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Veterinario aux = new Veterinario();
+                    aux.IDVeterinario = (int)datos.Lector["IDVeterinario"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Apellido = (string)datos.Lector["Apellido"];
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public HorarioVeterinario ObtenerHorarioVeterinario(int idVeterinario)
+        {
+            try
+            {
+                datos.limpiarParametros();
+                datos.setearConsulta("SELECT hora_apertura, hora_cierre FROM HorarioVeterinario WHERE id_veterinario = @idVeterinario");
+                datos.setearParametro("@idVeterinario", idVeterinario);
+                datos.ejecutarLectura();
+
+                HorarioVeterinario horario = new HorarioVeterinario();
+
+                if (datos.Lector.Read())
+                {
+                    // Verifica que no sean nulos
+                    if (!datos.Lector.IsDBNull(datos.Lector.GetOrdinal("hora_apertura")))
+                        horario.HoraApertura = (TimeSpan)datos.Lector["hora_apertura"];
+                    else
+                        throw new Exception("El veterinario no tiene hora de apertura configurada");
+
+                    if (!datos.Lector.IsDBNull(datos.Lector.GetOrdinal("hora_cierre")))
+                        horario.HoraCierre = (TimeSpan)datos.Lector["hora_cierre"];
+                    else
+                        throw new Exception("El veterinario no tiene hora de cierre configurada");
+                }
+                else
+                {
+                    throw new Exception("No se encontró horario para el veterinario seleccionado");
+                }
+
+                return horario;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"EXCEPCIÓN en ObtenerHorarioVeterinario: {ex.ToString()}");
+                throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public List<DateTime> ListarTurnosOcupados(int idVeterinario, DateTime fecha)
+        {
+            List<DateTime> lista = new List<DateTime>();
+            try
+            {
+                datos.limpiarParametros();
+                datos.setearConsulta(@"
+            SELECT FechaHoraTurno 
+            FROM Turnos 
+            WHERE IDVeterinario = @idVeterinario 
+            AND CONVERT(DATE, FechaHoraTurno) = @fecha
+            AND Activo = 1");
+
+                datos.setearParametro("@idVeterinario", idVeterinario);
+                datos.setearParametro("@fecha", fecha.Date);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    if (!datos.Lector.IsDBNull(datos.Lector.GetOrdinal("FechaHoraTurno")))
+                        lista.Add((DateTime)datos.Lector["FechaHoraTurno"]);
+                }
+
+                Debug.WriteLine($"Turnos ocupados encontrados: {lista.Count}");
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"EXCEPCIÓN en ListarTurnosOcupados: {ex.ToString()}");
+                throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public void AgregarTurno(Turno turno)
+        {
+            try
+            {
+                
+                datos.setearConsulta(@"
+                    INSERT INTO Turnos (
+                        FechaHoraTurno, 
+                        NroHistoriaClinica, 
+                        IDVeterinario, 
+                        MotivoConsulta, 
+                        IDEstadoTurno, 
+                        FechaRegistro, 
+                        Activo
+                    ) VALUES (
+                        @FechaHoraTurno, 
+                        @NroHistoriaClinica, 
+                        @IDVeterinario, 
+                        @MotivoConsulta, 
+                        1, -- Pendiente
+                        GETDATE(), 
+                        1
+                    )");
+
+                datos.setearParametro("@FechaHoraTurno", turno.FechaHoraTurno);
+                datos.setearParametro("@NroHistoriaClinica", turno.NroHistoriaClinica);
+                datos.setearParametro("@IDVeterinario", turno.IdVeterinario);
+                datos.setearParametro("@MotivoConsulta", turno.MotivoConsulta);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public List<Mascota> ListarMascotas()
+        {
+            List<Mascota> lista = new List<Mascota>();
+            try
+            {
+                datos.limpiarParametros();
+                datos.setearConsulta("SELECT NroHistoriaClinica, Nombre FROM Mascotas WHERE Activo = 1");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Mascota aux = new Mascota();
+                    aux.NroHistoriaClinica = (int)datos.Lector["NroHistoriaClinica"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
     }
 }
